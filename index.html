@@ -1,0 +1,3447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Veridian Capital Partners is an international investment facilitation and strategic advisory firm connecting global capital with high-impact opportunities across Africa and emerging markets."/>
+  <meta name="keywords" content="Africa investment, investment facilitation, strategic advisory, market entry Africa, infrastructure, energy, agribusiness, diaspora investment"/>
+  <meta name="author" content="Veridian Capital Partners"/>
+  <meta name="theme-color" content="#0A192F"/>
+  <title>Veridian Capital Partners | Global Investment Advisory for Africa</title>
+
+  
+  <link rel="canonical" href="https://veridian-capital.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Veridian Capital Partners"/>
+  <meta property="og:title" content="Veridian Capital Partners | Global Investment Advisory for Africa"/>
+  <meta property="og:description" content="An international investment facilitation and strategic advisory firm connecting global capital with high-impact opportunities across Africa and emerging markets."/>
+  <meta property="og:url" content="https://veridian-capital.com/"/>
+  <meta property="og:image" content="https://veridian-capital.com/hero_africa.png"/>
+  <meta property="og:image:alt" content="Veridian Capital Partners — bridging global capital with Africa's potential"/>
+  <meta property="og:locale" content="en_GB"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Veridian Capital Partners | Global Investment Advisory for Africa"/>
+  <meta name="twitter:description" content="An international investment facilitation and strategic advisory firm connecting global capital with high-impact opportunities across Africa and emerging markets."/>
+  <meta name="twitter:image" content="https://veridian-capital.com/hero_africa.png"/>
+  <meta name="twitter:image:alt" content="Veridian Capital Partners — bridging global capital with Africa's potential"/>
+
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <link rel="apple-touch-icon" href="logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ================================================================
+       DESIGN TOKENS
+    ================================================================ */
+    :root {
+      --navy:       #0A192F;
+      --navy-mid:   #112240;
+      --navy-light: #1A3556;
+      --gold:       #C5A059;
+      --gold-lt:    #D4B878;
+      --gold-dk:    #A8893A;
+      --offwhite:   #F7F6F2;
+      --warm-grey:  #F2EFE9;
+      --white:      #FFFFFF;
+      --text-body:  #8892A4;
+      --text-lt:    #CCD6F6;
+      --border:     rgba(197,160,89,0.2);
+      --glass-bg:   rgba(10,25,47,0.85);
+      --max-w:      1200px;
+      --radius:     8px;
+      --tr:         0.3s cubic-bezier(.4,0,.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--text-lt); overflow-x: hidden; line-height: 1.7; }
+
+    /* ── Utilities ───────────────────────────────────── */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0rem; }
+    .serif { font-family: 'Cormorant Garamond', serif; }
+    .gold  { color: var(--gold); }
+
+    .section-label {
+      display: inline-flex; align-items: center; gap: .65rem;
+      font-size: .72rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: .3rem;
+    }
+    .section-label::before, .section-label::after {
+      content: ''; display: block; width: 1.8rem; height: 1px; background: var(--gold);
+    }
+    .section-label.left-only::after { display: none; }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; }
+    .d3 { transition-delay: .3s; } .d4 { transition-delay: .4s; }
+
+    /* Buttons */
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--gold); color: var(--navy); border: 2px solid var(--gold);
+      padding: .85rem 2rem; border-radius: var(--radius);
+      font-weight: 700; font-size: .88rem; letter-spacing: .05em;
+      text-decoration: none; cursor: pointer; font-family: 'DM Sans', sans-serif;
+      transition: background var(--tr), transform var(--tr), box-shadow var(--tr);
+    }
+    .btn-gold:hover { background: var(--gold-lt); border-color: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(197,160,89,.35); }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.35);
+      padding: .85rem 2rem; border-radius: var(--radius);
+      font-weight: 500; font-size: .88rem; letter-spacing: .04em;
+      text-decoration: none; cursor: pointer; font-family: 'DM Sans', sans-serif;
+      transition: border-color var(--tr), transform var(--tr);
+    }
+    .btn-outline:hover { border-color: var(--white); transform: translateY(-2px); }
+
+    .btn-outline-gold {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: transparent; color: var(--gold); border: 1.5px solid var(--gold);
+      padding: .75rem 1.75rem; border-radius: var(--radius);
+      font-weight: 600; font-size: .85rem; letter-spacing: .05em;
+      text-decoration: none; cursor: pointer; font-family: 'DM Sans', sans-serif;
+      transition: background var(--tr), color var(--tr), transform var(--tr);
+    }
+    .btn-outline-gold:hover { background: var(--gold); color: var(--navy); transform: translateY(-2px); }
+
+    /* ================================================================
+       NAVIGATION  ── Desktop: centered floating "pill" sized to fit the
+       full "VERIDIAN CAPITAL" wordmark + 6 menu links + CTA + WhatsApp
+       on one line at every laptop viewport ≥769px (i.e. 1024 / 1280 /
+       1366 / 1440 / 1536 / 1600 / 1920 / ultrawide). The base pill is
+       width: min(94vw, 1340px); typography tightens in a series of
+       progressively narrower @media tiers (≤1440, ≤1280, ≤1180, ≤1100,
+       ≤1024, ≤900) so the lockup keeps fitting cleanly without overlap.
+       At the narrowest laptop tier (≤900) the wordmark is preserved
+       but shrunk to .82rem with tight .03em letter-spacing (~94px of
+       inner width) while link/CTA chrome trims one more notch, so the
+       full lockup still holds down to the 769px laptop floor. The
+       horizontal nav collapses to a hamburger ONLY at ≤768px, where
+       the small floating ROUND mobile pill takes over.
+    ================================================================ */
+    #navbar {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(94vw, 1340px);
+      max-width: 1340px;
+      z-index: 1000;
+      padding: .75rem 1.5rem;
+      border-radius: 14px;
+      background: rgba(10,25,47,.78);
+      backdrop-filter: blur(14px) saturate(180%);
+      -webkit-backdrop-filter: blur(14px) saturate(180%);
+      border: 1px solid rgba(197,160,89,.25);
+      box-shadow:
+        0 8px 30px rgba(10,25,47,.18),
+        0 1px 2px rgba(10,25,47,.06);
+      transition: background var(--tr), padding var(--tr), backdrop-filter var(--tr),
+                  border-color var(--tr), box-shadow var(--tr);
+    }
+    #navbar.scrolled {
+      background: rgba(10,25,47,.92);
+      border-color: rgba(197,160,89,.4);
+      box-shadow:
+        0 12px 40px rgba(10,25,47,.35),
+        0 2px 4px rgba(10,25,47,.12);
+    }
+    .nav-inner {
+      display: flex; flex-wrap: nowrap;
+      align-items: center; justify-content: flex-start;
+      gap: .85rem;
+      max-width: none;
+      width: 100%;
+      padding: 0;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-weight: 600; letter-spacing: .1em;
+      color: var(--white); text-decoration: none;
+      display: inline-flex; align-items: center; gap: .55rem;
+      flex-shrink: 0;
+    }
+    .nav-logo span {
+      white-space: nowrap;
+    }
+    .nav-logo-img {
+      height: 44px; width: auto; display: block;
+      flex-shrink: 0;
+    }
+    .footer-brand .nav-logo-img { height: 42px; }
+
+    .nav-links {
+      display: flex; align-items: center;
+      gap: 1rem;
+      list-style: none;
+      flex-wrap: nowrap;
+      flex: 0 1 auto;
+      min-width: 0;
+      justify-content: flex-end;
+      margin-left: auto;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(204,214,246,.85);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .82rem; font-weight: 500; letter-spacing: .1em;
+      text-transform: uppercase;
+      position: relative;
+      padding: .45rem .55rem;
+      border-radius: 6px;
+      transition: color .25s ease, background .25s ease, font-weight .25s ease;
+      white-space: nowrap;
+    }
+    /* Hover / focus — transient: gold text + animated underline scales in */
+    .nav-links a::after {
+      content: '';
+      position: absolute; left: .55rem; right: .55rem; bottom: -1px;
+      height: 1px; background: var(--gold);
+      transform: scaleX(0); transform-origin: center;
+      transition: transform .35s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a:focus-visible { color: var(--gold); }
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after { transform: scaleX(1); }
+
+    /* Active page — persistent and clearly distinct from hover.
+       Soft gold pill background, brighter gold text, semibold weight,
+       and a small filled gold dot above the label as a deliberate
+       "you are here" indicator. The hover underline pseudo-element
+       is suppressed in this state so the two never compound. */
+    .nav-links a.active {
+      color: var(--gold-lt);
+      font-weight: 600;
+      background: rgba(197,160,89,.12);
+      box-shadow: inset 0 0 0 1px rgba(197,160,89,.25);
+    }
+    .nav-links a.active::after { transform: scaleX(0); }
+
+    /* Right-side solid-gold CTA button (sibling of .nav-links) */
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: .35rem;
+      padding: .55rem 1.05rem;
+      background: var(--gold); color: var(--navy);
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .78rem; font-weight: 600; letter-spacing: .11em;
+      text-transform: uppercase; text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+      box-shadow: 0 4px 14px rgba(197,160,89,.25);
+    }
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      background: var(--gold-lt);
+      border-color: var(--gold-lt);
+      box-shadow: 0 8px 22px rgba(197,160,89,.35);
+    }
+    .nav-cta:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    /* Compact icon-only WhatsApp button sits to the right of .nav-cta on
+       desktop. Outlined to read as a secondary action against the gold
+       Partner CTA. Same pill radius + gold tint family for visual harmony. */
+    .nav-whatsapp {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px;
+      background: transparent;
+      border: 1px solid rgba(197,160,89,.35);
+      border-radius: 999px;
+      color: var(--gold);
+      text-decoration: none;
+      transition: background .25s ease, border-color .25s ease, transform .25s ease;
+      flex-shrink: 0;
+    }
+    .nav-whatsapp:hover {
+      background: rgba(197,160,89,.1);
+      border-color: var(--gold);
+      transform: translateY(-1px);
+    }
+    .nav-whatsapp:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+    .nav-whatsapp svg { display: block; }
+    /* Right-side cluster — pair the WhatsApp pill and hamburger as one
+       unit so the .nav-inner gap never gets in between them. The .35rem
+       internal gap keeps both circular hit-targets visually distinct.
+
+       On desktop (≥769px) the cluster sits naturally next to the
+       Partner CTA — no margin-left:auto, otherwise a wide chasm opens
+       between the gold CTA and the WhatsApp icon. At ≤768px the
+       horizontal nav-links/nav-cta are hidden and the mobile pill uses
+       .nav-inner { justify-content: space-between } to push the
+       WhatsApp + hamburger flush to the right edge of the pill. */
+    .nav-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      flex-shrink: 0;
+    }
+
+    /* Tighten nav-link + wordmark typography on narrower desktop widths
+       so the pill keeps fitting the full lockup (logo + "VERIDIAN
+       CAPITAL" wordmark + 6 menu links + CTA + WhatsApp) on one line
+       all the way down to 769px. The cascade widens the pill toward
+       full-viewport and progressively trims gap / padding / font-size
+       / letter-spacing / logo-img height. Each tier also keeps the
+       .nav-links a::after underline insets in sync with the link
+       padding so the hover/focus underline never extends past the
+       link's padding box.
+
+       At ≤900px the wordmark stays visible but shrinks to .82rem /
+       .03em letter-spacing and link/CTA chrome trims one more notch
+       so the full lockup still fits without overlap down to 769px.
+       Below 768px the horizontal links + CTA collapse and the
+       hamburger takes over — see the @media(max-width:768px)
+       mobile-pill block further down. */
+    @media (max-width: 1440px) {
+      #navbar { width: 92vw; max-width: 1280px; }
+      .nav-inner { gap: .75rem; }
+      .nav-links { gap: .9rem; }
+      .nav-links a { font-size: .8rem; letter-spacing: .09em; padding: .42rem .5rem; }
+      .nav-links a::after { left: .5rem; right: .5rem; }
+      .nav-logo { font-size: 1.12rem; letter-spacing: .08em; }
+      .nav-logo-img { height: 40px; }
+      .nav-cta { padding: .52rem 1rem; font-size: .74rem; letter-spacing: .1em; }
+    }
+    @media (max-width: 1280px) {
+      #navbar { width: 96vw; max-width: 1240px; padding: .6rem 1rem; }
+      .nav-inner { gap: .6rem; }
+      .nav-links { gap: .75rem; }
+      .nav-links a { font-size: .76rem; letter-spacing: .07em; padding: .4rem .35rem; }
+      .nav-links a::after { left: .35rem; right: .35rem; }
+      .nav-logo { font-size: 1.05rem; letter-spacing: .06em; gap: .4rem; }
+      .nav-logo-img { height: 36px; }
+      .nav-cta { padding: .48rem .9rem; font-size: .7rem; letter-spacing: .09em; }
+    }
+    /* ≤1180px: extra intermediate tier so the squeeze between 1180
+       and 1100 doesn't have to be carried by the ≤1280 values alone.
+       Modest tighten of gaps and link/CTA chrome, pill widens to
+       97vw to recover ~25-30px of inner width. */
+    @media (max-width: 1180px) {
+      #navbar { width: 97vw; padding: .55rem 1rem; }
+      .nav-inner { gap: .55rem; }
+      .nav-links { gap: .65rem; }
+      .nav-links a { font-size: .74rem; letter-spacing: .05em; padding: .38rem .35rem; }
+      .nav-links a::after { left: .35rem; right: .35rem; }
+      .nav-logo { font-size: 1rem; letter-spacing: .05em; gap: .38rem; }
+      .nav-logo-img { height: 34px; }
+      .nav-cta { padding: .45rem .8rem; font-size: .66rem; letter-spacing: .08em; }
+      .nav-whatsapp { width: 30px; height: 30px; }
+    }
+    /* ≤1100px: small-laptop / tablet-landscape range. Pill widens
+       further, gaps + padding + type tighten one more notch so the
+       full lockup (wordmark + 6 links + CTA + WhatsApp) stays on
+       one row without overlap. */
+    @media (max-width: 1100px) {
+      #navbar { width: 97vw; padding: .5rem .8rem; }
+      .nav-inner { gap: .45rem; }
+      .nav-links { gap: .5rem; }
+      .nav-links a { font-size: .7rem; letter-spacing: .04em; padding: .35rem .28rem; }
+      .nav-links a::after { left: .28rem; right: .28rem; }
+      .nav-logo { font-size: .96rem; letter-spacing: .04em; gap: .35rem; }
+      .nav-logo-img { height: 32px; }
+      .nav-cta { padding: .4rem .7rem; font-size: .64rem; letter-spacing: .07em; }
+      .nav-whatsapp { width: 30px; height: 30px; }
+    }
+    /* ≤1024px: laptop-floor (the non-negotiable target). Pill goes to
+       98vw with .7rem horizontal padding, gaps tighten to .4rem, link
+       padding bottoms out at .22rem horizontal so the underline insets
+       still have a meaningful track, and the wordmark holds at .92rem
+       — still legible Cormorant Garamond at this size. */
+    @media (max-width: 1024px) {
+      #navbar { width: 98vw; padding: .5rem .7rem; }
+      .nav-inner { gap: .4rem; }
+      .nav-links { gap: .4rem; }
+      .nav-links a { font-size: .66rem; letter-spacing: .03em; padding: .32rem .22rem; }
+      .nav-links a::after { left: .22rem; right: .22rem; }
+      .nav-logo { font-size: .92rem; letter-spacing: .04em; gap: .32rem; }
+      .nav-logo-img { height: 30px; }
+      .nav-cta { padding: .38rem .6rem; font-size: .6rem; letter-spacing: .06em; }
+      .nav-whatsapp { width: 28px; height: 28px; }
+    }
+    /* ≤900px: grey-zone (769-900). "VERIDIAN CAPITAL" is kept visible
+       at this tier — shrunk to .82rem with tight .03em letter-spacing
+       so the Cormorant wordmark only consumes ~94px of inner width
+       (vs ~108px at the ≤1024 tier). The link cluster + CTA padding
+       are simultaneously trimmed one more notch so the full lockup
+       (logo + wordmark + 6 links + CTA + WhatsApp) still fits down
+       to the 769px laptop floor with a small but real margin
+       (~37px slack at 769, ~67px at 800, ~164px at 900). The ≤768
+       mobile round pill block below re-skins the chrome (round
+       corners, larger 1rem wordmark) for phone form-factor. */
+    @media (max-width: 900px) {
+      #navbar { width: 98vw; padding: .48rem .6rem; }
+      .nav-inner { gap: .35rem; }
+      .nav-links { gap: .32rem; }
+      .nav-links a { font-size: .64rem; letter-spacing: .03em; padding: .3rem .18rem; }
+      .nav-links a::after { left: .18rem; right: .18rem; }
+      .nav-logo { font-size: .82rem; letter-spacing: .03em; gap: .3rem; }
+      .nav-logo-img { height: 30px; }
+      .nav-cta { padding: .35rem .5rem; font-size: .58rem; letter-spacing: .05em; }
+      .nav-whatsapp { width: 28px; height: 28px; }
+    }
+
+    /* ── Ultra-wide breakpoints (≥1600px / ≥1920px) ──────────────────
+       Purely additive rules so 4K / ultrawide displays don't feel
+       under-utilised. The navbar pill is allowed to grow proportionally,
+       the hero content snaps into a centered 1500px column instead of
+       hugging the far left edge, and the floating .hero-stats panel is
+       re-anchored to align with the right edge of that centered column
+       (rather than the right edge of the viewport). All rules below
+       1600px are untouched. */
+    @media (min-width: 1600px) {
+      #navbar { width: min(86vw, 1440px); max-width: 1440px; }
+    }
+    @media (min-width: 1920px) {
+      #navbar { width: min(82vw, 1520px); max-width: 1520px; }
+    }
+
+    /* Hamburger — visible only at ≤768px (phone / mobile pill).
+       Hidden by default on every laptop viewport (≥769px) where the
+       inline nav links + Partner CTA expose the full menu and a popup
+       trigger would be redundant. Restored to display: flex inside the
+       @media(max-width:768px) mobile-pill block where the horizontal
+       links + CTA collapse and the hamburger becomes the SOLE trigger
+       for the Premium Compact view (#navPremium).
+       Compact 36×36 button with subtle gold-tinted dashes on a transparent
+       background so it doesn't dominate the pill; border + dashes amplify
+       to full gold on hover / focus. The .open state morphs the three
+       dashes into an X (handled in JS by toggling .open). */
+    .hamburger {
+      display: none; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 4px;
+      width: 36px; height: 36px;
+      background: transparent;
+      border: 1px solid rgba(197,160,89,.18);
+      border-radius: 10px;
+      cursor: pointer;
+      padding: 0;
+      flex-shrink: 0;
+      transition: opacity .25s ease, background .25s ease, border-color .25s ease;
+    }
+    .hamburger span {
+      display: block;
+      width: 18px; height: 1.5px;
+      background: rgba(197,160,89,.7);
+      border-radius: 2px;
+      transition: transform .3s ease, opacity .3s ease, background .25s ease, width .25s ease;
+    }
+    .hamburger:hover {
+      background: rgba(197,160,89,.08);
+      border-color: rgba(197,160,89,.45);
+    }
+    .hamburger:hover span { background: var(--gold); width: 20px; }
+    .hamburger:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+
+    /* ================================================================
+       NAVBAR — PREMIUM-OPEN STATE
+       While the Premium Compact view (#navPremium) is open, the
+       <body> carries .nav-premium-open (toggled by initNavPremium).
+       The navbar pill simplifies to a single centered logo +
+       wordmark — the gold × inside the premium card becomes the
+       sole close affordance, so the hamburger fades out and is
+       made unclickable. On desktop the horizontal links + Partner
+       CTA are also hidden so the pill matches the cleaner mobile
+       state. The pill itself keeps its size, glassy background and
+       gold border — only its contents reflow.
+    ================================================================ */
+    body.nav-premium-open #navbar .hamburger {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    body.nav-premium-open #navbar .nav-inner {
+      justify-content: center;
+    }
+    body.nav-premium-open #navbar .nav-logo {
+      margin: 0;
+    }
+    /* Mobile-pill mode (≤768px — phone): when premium is open,
+       .nav-inner switches to justify-content: center above. Pull the
+       hamburger out of flex flow so the logo can truly center, and
+       hide the WhatsApp pill for the duration of the open state so
+       it doesn't pull the optical centre to the right. The hamburger
+       stays visible and morphs to an X via the .open class — it's
+       the primary close affordance alongside the gold × inside the
+       card. */
+    @media (max-width: 768px) {
+      body.nav-premium-open #navbar .hamburger {
+        position: absolute;
+        right: .65rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      body.nav-premium-open #navbar .nav-whatsapp { display: none; }
+    }
+    /* Laptop (≥769px): the hamburger isn't surfaced at these widths
+       (full horizontal nav is shown instead), so the premium menu
+       shouldn't normally be reachable here. Defensive styling: if it
+       is opened programmatically, hide the horizontal links +
+       Partner CTA so only the centered logo + wordmark remains. */
+    @media (min-width: 769px) {
+      body.nav-premium-open #navbar .nav-links,
+      body.nav-premium-open #navbar .nav-cta {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        display: none;
+      }
+    }
+
+    /* ================================================================
+       PREMIUM COMPACT NAV
+       Opened by the hamburger button (#hambBtn). On desktop (≥769px)
+       the hamburger is hidden — the inline nav-links + Partner CTA
+       are the primary navigation surface — so in practice this card
+       is only reachable on mobile (≤768px). The body.nav-premium-open
+       desktop rules below are kept as defensive styling in case the
+       hamburger is ever surfaced at wider widths. A 50vw centered
+       card with a glassy navy background, gold accents, a vertical
+       stack of menu items + a gold pill CTA. Closes on hamburger
+       toggle, outside click, close-button click, or Escape. Sits
+       above #navbar (z 1100).
+    ================================================================ */
+    .nav-premium {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 1100;
+      transform: translate(-50%, -50%) scale(.96);
+      width: 50vw;
+      min-width: 280px;
+      max-width: 520px;
+      max-height: 90vh;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: .85rem 1.5rem 1.25rem;
+      background: rgba(10,25,47,.92);
+      -webkit-backdrop-filter: blur(18px) saturate(180%);
+      backdrop-filter: blur(18px) saturate(180%);
+      border: 1px solid rgba(197,160,89,.28);
+      border-radius: 16px;
+      box-shadow:
+        0 18px 60px rgba(10,25,47,.5),
+        0 4px 14px rgba(10,25,47,.3);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease, transform .3s ease;
+    }
+    .nav-premium.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    .nav-premium-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid rgba(197,160,89,.25);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      transition: background .2s ease, border-color .2s ease, transform .25s ease, color .2s ease;
+    }
+    .nav-premium-close:hover {
+      background: rgba(197,160,89,.12);
+      border-color: rgba(197,160,89,.55);
+      color: var(--gold-lt);
+      transform: rotate(90deg);
+    }
+    .nav-premium-close:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+    .nav-premium-list {
+      display: flex;
+      flex-direction: column;
+      gap: .65rem;
+      padding: .5rem 0 0;
+      margin: 0;
+      list-style: none;
+      align-items: center;
+      width: 100%;
+    }
+    .nav-premium-list li { list-style: none; }
+    .nav-premium-link {
+      position: relative;
+      display: inline-block;
+      padding: .4rem .5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .95rem;
+      font-weight: 500;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--text-body);
+      text-decoration: none;
+      transition: color .25s ease;
+    }
+    .nav-premium-link::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 1px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform .3s ease;
+    }
+    .nav-premium-link:hover,
+    .nav-premium-link:focus-visible { color: var(--gold); }
+    .nav-premium-link:hover::after,
+    .nav-premium-link:focus-visible::after { transform: scaleX(1); }
+    .nav-premium-cta {
+      display: inline-flex;
+      align-self: center;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem auto 0;
+      padding: .65rem 1.5rem;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(197,160,89,.25);
+      transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+    }
+    .nav-premium-cta:hover {
+      background: var(--gold-lt);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(197,160,89,.35);
+    }
+    .nav-premium-cta:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 480px) {
+      .nav-premium {
+        min-width: 240px;
+        padding: .85rem 1rem 1rem;
+        border-radius: 14px;
+      }
+      .nav-premium-list { padding-top: .5rem; gap: .55rem; }
+      .nav-premium-link { font-size: .85rem; letter-spacing: .14em; }
+      .nav-premium-cta { font-size: .74rem; padding: .58rem 1.3rem; }
+    }
+
+    /* Short-height landscape phones (e.g. 568×320 / 667×375 rotated):
+       7 stacked items + CTA would exceed the available height. Switch
+       to a compact 2-column grid for the menu items so everything
+       fits comfortably above the fold. */
+    @media (max-height: 480px) {
+      .nav-premium {
+        width: clamp(360px, 70vw, 560px);
+        max-width: 560px;
+        padding: .75rem 1.25rem .9rem;
+      }
+      .nav-premium-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .55rem 1.25rem;
+        padding-top: .5rem;
+        align-items: stretch;
+        justify-items: center;
+      }
+      .nav-premium-link { font-size: .82rem; padding: .3rem .25rem; letter-spacing: .14em; }
+      .nav-premium-cta { margin-top: .75rem; font-size: .74rem; padding: .5rem 1.2rem; }
+    }
+
+    /* ================================================================
+       HERO
+    ================================================================ */
+    #home {
+      min-height: 88vh; position: relative; overflow: hidden;
+      display: flex; align-items: center;
+      padding: 4rem 0 2rem;
+    }
+    .hero-img {
+      position: absolute; inset: 0;
+      background-image: url('hero_africa.png');
+      background-size: cover; background-position: center;
+      z-index: 0;
+    }
+    .hero-img::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(10,25,47,.92) 0%, rgba(10,25,47,.75) 60%, rgba(10,25,47,.85) 100%);
+    }
+    .hero-particle { position: absolute; inset: 0; z-index: 1; }
+
+    #home .container { max-width: none; margin: 0; padding: 0 3rem 0 4rem; }
+    .hero-content { position: relative; z-index: 2; max-width: 760px; padding-top: 2rem; margin-left: 0; }
+
+    .hero-eyebrow {
+      font-size: clamp(.65rem, .85vw, .72rem); letter-spacing: .22em; text-transform: uppercase;
+      color: var(--gold); font-weight: 700;
+      display: flex; align-items: center; gap: .75rem; margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .hero-eyebrow::before { content: ''; width: 2.5rem; height: 1px; background: var(--gold); flex-shrink: 0; }
+
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.85rem, 6.2vw, 5rem);
+      font-weight: 600; line-height: 1.1;
+      color: var(--white); margin-bottom: 1.5rem; letter-spacing: -.01em;
+      overflow-wrap: break-word;
+    }
+    .hero-h1 em { color: var(--gold); font-style: italic; }
+
+    .hero-sub {
+      font-size: clamp(.95rem, 1.2vw, 1.1rem); color: var(--text-body); max-width: 580px;
+      margin-bottom: 2.5rem; font-weight: 300; line-height: 1.75;
+    }
+
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+
+    /* Floating stats - slim vertical column on the right side of hero */
+    .hero-stats {
+      position: absolute;
+      right: 2.5rem;
+      top: calc(50% + 2rem);
+      transform: translateY(-50%);
+      z-index: 3;
+      display: flex; flex-direction: column; gap: 2rem;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(197,160,89,.25);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      padding: 2.25rem 1.5rem;
+      animation: floatV 4s ease-in-out infinite;
+      width: 168px;
+    }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+    @keyframes floatV {
+      0%,100% { transform: translateY(-50%); }
+      50%     { transform: translateY(calc(-50% - 14px)); }
+    }
+    .hstat { text-align: center; min-width: 0; }
+    .hstat-val {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.65rem;
+      font-weight: 700; color: var(--gold); line-height: 1; display: block;
+    }
+    .hstat-lbl { font-size: .68rem; font-weight: 500; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.82); margin-top: .5rem; display: block; line-height: 1.25; overflow-wrap: anywhere; }
+    .hstat-div { width: 50%; height: 1px; background: rgba(197,160,89,.25); align-self: center; }
+
+    /* Ultra-wide (≥1600px): pull the hero content out of its left-hugging
+       full-bleed layout into a centered 1500px column, and re-anchor the
+       floating .hero-stats panel so it aligns with the right edge of that
+       centered column instead of the far-right viewport edge. Below
+       1600px the existing hero rules (max-width:none; right:2.5rem) are
+       untouched. */
+    @media (min-width: 1600px) {
+      #home .container { max-width: 1500px; margin: 0 auto; padding: 0 4rem; }
+      .hero-stats { right: max(2.5rem, calc((100vw - 1500px) / 2 + 2.5rem)); }
+    }
+
+    /* ================================================================
+       TICKER STRIP
+    ================================================================ */
+    .ticker {
+      background: var(--gold); color: var(--navy); overflow: hidden;
+      padding: .7rem 0; font-size: .8rem; font-weight: 700; letter-spacing: .08em;
+    }
+    .ticker-track {
+      display: flex; gap: 2rem; width: max-content;
+      animation: tick 30s linear infinite;
+    }
+    @keyframes tick { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .ticker-item { white-space: nowrap; }
+    .ticker-sep { opacity: .5; }
+
+    /* ================================================================
+       ABOUT
+    ================================================================ */
+    #about { padding: 2rem 0; background: var(--offwhite); position: relative; overflow: hidden; }
+    #about::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg,transparent,var(--gold),transparent); }
+
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: stretch; }
+
+    .about-img-wrap {
+      position: relative; border-radius: 10px; overflow: hidden;
+      box-shadow: 0 24px 60px rgba(10,25,47,.2);
+      min-height: 440px;
+    }
+    .about-img-wrap img { width: 100%; height: 100%; min-height: 440px; object-fit: cover; object-position: center center; display: block; }
+    .about-img-badge {
+      position: absolute; bottom: 1.75rem; left: 1.75rem;
+      background: var(--navy); color: var(--gold);
+      border: 1px solid rgba(197,160,89,.3);
+      border-radius: var(--radius); padding: 1rem 1.5rem;
+      backdrop-filter: blur(8px);
+      /* Horizontal layout — big serif numeral + small uppercase caption
+         on a single line, baseline-aligned so the caption hangs off the
+         numeral's bottom edge as one editorial unit. */
+      display: inline-flex;
+      align-items: baseline;
+      gap: .85rem;
+      white-space: nowrap;
+    }
+    .badge-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 700; line-height: 1; }
+    .badge-txt { font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; color: var(--text-body); margin-top: 0; }
+
+    .about-text { }
+    .about-text .section-label { color: var(--gold-dk); }
+    .about-text .section-label::before, .about-text .section-label::after { background: var(--gold-dk); }
+
+    .about-h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.7rem, 3.8vw, 2.8rem); font-weight: 600;
+      color: var(--navy); line-height: 1.2; margin-bottom: 1.25rem; letter-spacing: -.01em;
+      overflow-wrap: break-word;
+    }
+    .about-body { color: #5a6478; font-size: .97rem; line-height: 1.85; margin-bottom: 1rem; font-weight: 300; }
+
+    .about-pillars {
+      display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; margin: 1.75rem 0;
+    }
+    .pillar {
+      display: flex; align-items: flex-start; gap: .7rem;
+      background: var(--navy); border-radius: var(--radius);
+      padding: .95rem 1rem; border: 1px solid rgba(197,160,89,.12);
+      transition: border-color var(--tr);
+    }
+    .pillar:hover { border-color: rgba(197,160,89,.35); }
+    .pillar-icon { color: var(--gold); font-size: 1.2rem; flex-shrink: 0; margin-top: .15rem; }
+    .pillar-title { font-size: .82rem; font-weight: 600; color: var(--white); margin-bottom: .2rem; }
+    .pillar-sub { font-size: .75rem; color: var(--text-body); line-height: 1.5; }
+
+    /* Who we serve */
+    .serve-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: .75rem; margin-top: 1.5rem; }
+    .serve-item {
+      background: var(--navy); border: 1px solid rgba(197,160,89,.12);
+      border-radius: var(--radius); padding: 1rem;
+      text-align: center; transition: border-color var(--tr), transform var(--tr);
+    }
+    .serve-item:hover { border-color: rgba(197,160,89,.35); transform: translateY(-3px); }
+    .serve-icon { font-size: 1.5rem; margin-bottom: .4rem; }
+    .serve-title { font-size: .8rem; font-weight: 600; color: var(--white); margin-bottom: .2rem; }
+    .serve-desc { font-size: .7rem; color: var(--text-body); line-height: 1.5; }
+
+    /* ================================================================
+       WHAT WE DO
+    ================================================================ */
+    #whatwedo { padding: 3rem 0; background: var(--navy-mid); position: relative; }
+    #whatwedo::before, #whatwedo::after { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: linear-gradient(90deg,transparent,var(--border),transparent); }
+    #whatwedo::before { top: 0; } #whatwedo::after { bottom: 0; }
+
+    .section-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
+    .section-h2 { font-family: 'Cormorant Garamond',serif; font-size: clamp(1.7rem, 3.8vw, 2.8rem); font-weight: 600; color: var(--white); line-height: 1.2; margin-bottom: 1rem; overflow-wrap: break-word; }
+    .section-h2.dark { color: var(--navy); }
+    .section-sub { color: var(--text-body); font-size: .97rem; line-height: 1.75; }
+    .section-sub.dark { color: #5a6478; }
+
+    /* Spacer between two sub-sections that share the same parent section
+       (e.g. "About Us" body → "Who We Serve" grid, or impact stats →
+       "Looking Forward" grid). Scales down on mobile to avoid the big
+       empty vertical band that 4rem produces on small viewports. */
+    .subsection-spacer { margin-top: 4rem; }
+
+    .services-numbered { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    /* Desktop service cards: 2x2 media-object grid.
+       Layout:   num   | title
+                 icon  | desc
+       Compresses what used to be a tall vertical block (num → icon → title → desc)
+       into a compact horizontal arrangement, freeing significant vertical space
+       when 9 cards render in a 3-col grid. Number + icon stack on the left as a
+       visual sigil; title + description stack on the right as the editorial copy. */
+    .svc-card {
+      background: rgba(255,255,255,.03); border: 1px solid rgba(197,160,89,.1);
+      border-radius: var(--radius);
+      position: relative; overflow: hidden;
+      transition: transform var(--tr), box-shadow var(--tr), border-color var(--tr), background var(--tr);
+      cursor: default;
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      grid-template-areas:
+        "num   title"
+        "icon  desc";
+      gap: .5rem 1.25rem;
+      padding: 1.5rem;
+      align-items: start;
+    }
+    .svc-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg,transparent,var(--gold),transparent);
+      transform: scaleX(0); transition: transform var(--tr);
+    }
+    .svc-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,.35); border-color: rgba(197,160,89,.3); background: rgba(255,255,255,.05); }
+    .svc-card:hover::before { transform: scaleX(1); }
+    /* align-self: end on num + title bottom-aligns the large numeral with the
+       title baseline area, keeping a consistent editorial baseline across cards
+       regardless of whether the title wraps to 1 or 2 lines. */
+    .svc-num { grid-area: num; font-family: 'Cormorant Garamond',serif; font-size: 2.2rem; font-weight: 700; color: rgba(197,160,89,.15); line-height: 1; margin: 0; align-self: end; }
+    .svc-icon { grid-area: icon; width: 48px; height: 48px; background: rgba(197,160,89,.1); border: 1px solid rgba(197,160,89,.22); border-radius: 9px; display: flex; align-items: center; justify-content: center; margin: 0; transition: background var(--tr); }
+    .svc-card:hover .svc-icon { background: rgba(197,160,89,.2); }
+    .svc-icon svg { width: 24px; height: 24px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .svc-title { grid-area: title; font-family: 'Cormorant Garamond',serif; font-size: 1.1rem; font-weight: 600; color: var(--white); line-height: 1.25; margin: 0 0 .25rem; align-self: end; min-width: 0; }
+    .svc-desc { grid-area: desc; font-size: .85rem; color: var(--text-body); line-height: 1.55; margin: 0; min-width: 0; }
+
+    /* ================================================================
+       KEY SECTORS
+    ================================================================ */
+    #sectors { padding: 3rem 0; background: var(--offwhite); }
+
+    .sectors-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+    .sector-card {
+      border-radius: var(--radius); overflow: hidden;
+      position: relative; cursor: default;
+      box-shadow: 0 4px 20px rgba(10,25,47,.1);
+      transition: transform var(--tr), box-shadow var(--tr);
+    }
+    .sector-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(10,25,47,.18); }
+    .sector-img {
+      width: 100%; height: 200px; object-fit: cover; display: block;
+      transition: transform .5s ease;
+    }
+    .sector-card:hover .sector-img { transform: scale(1.05); }
+    .sector-card.img-fallback {
+      background: linear-gradient(135deg, var(--navy-mid), var(--navy));
+      min-height: 240px;
+    }
+    .sector-card.img-fallback .sector-overlay {
+      background: linear-gradient(180deg, rgba(10,25,47,.25) 0%, rgba(10,25,47,.55) 100%);
+    }
+    .sector-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg,rgba(10,25,47,.1) 0%,rgba(10,25,47,.88) 100%);
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 1.25rem;
+    }
+    .sector-icon-wrap {
+      width: 38px; height: 38px; background: var(--gold);
+      border-radius: 7px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: .6rem; flex-shrink: 0;
+    }
+    .sector-icon-wrap svg { width: 18px; height: 18px; stroke: var(--navy); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .sector-name { font-family: 'Cormorant Garamond',serif; font-size: 1.15rem; font-weight: 600; color: var(--white); margin-bottom: .3rem; }
+    .sector-desc { font-size: .72rem; color: rgba(255,255,255,.7); line-height: 1.5; }
+
+    /* ================================================================
+       OUR IMPACT
+    ================================================================ */
+    #impact { padding: 3rem 0; background: var(--navy); position: relative; overflow: hidden; }
+    #impact::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg,transparent,var(--gold),transparent); }
+
+    .impact-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 1rem; }
+    .impact-stat {
+      background: rgba(255,255,255,.04); border: 1px solid rgba(197,160,89,.14);
+      border-radius: var(--radius); padding: 2rem 1.75rem;
+      text-align: center; position: relative; overflow: hidden;
+      transition: border-color var(--tr), transform var(--tr);
+    }
+    .impact-stat::before {
+      content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 3rem; height: 2px; background: var(--gold);
+    }
+    .impact-stat:hover { border-color: rgba(197,160,89,.35); transform: translateY(-4px); }
+    .impact-val { font-family: 'Cormorant Garamond',serif; font-size: 2.8rem; font-weight: 700; color: var(--gold); line-height: 1; display: block; margin-bottom: .5rem; }
+    .impact-label { font-size: .82rem; font-weight: 600; color: var(--white); margin-bottom: .4rem; }
+    .impact-desc { font-size: .78rem; color: var(--text-body); line-height: 1.6; }
+
+    /* Premium "loyalty toast" CTA — floating popup pinned to the
+       bottom-right of the viewport. Navy gradient + gold hairline trim
+       + vertical gold accent bar (left edge), layered shadows. Animates
+       in (slide-up + slight scale-up + fade) when the user scrolls into
+       the Impact section; dismissible via × button, the inline CTA, or
+       Escape. */
+    /* 8px spacing system applied throughout: container padding, gaps,
+       inset for accent bar + close × all snap to 4/8/12/16/24px. Spacing
+       rhythm reads: 20px top → heading → 8px → description → 16px →
+       hairline divider → 14px → CTA → 18px bottom. */
+    .impact-cta-band {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      max-width: 380px;
+      width: calc(100vw - 48px);
+      z-index: 950;
+      display: flex;
+      flex-direction: column;
+      /* Left 28px clears the vertical gold accent bar (3px wide @ 12px from
+         edge); right 20px works with the text container's inner padding to
+         clear the close × at right:12px. Top 20px gives the heading a bit
+         more breathing room from the close ×. */
+      padding: 20px 20px 18px 28px;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(197,160,89,.06), transparent 55%),
+        linear-gradient(135deg, rgba(10,25,47,.96) 0%, rgba(17,34,64,.96) 100%);
+      border: 1px solid rgba(197,160,89,.22);
+      border-radius: 14px;
+      /* Layered low-blur depth: 3 drop shadows + 1 inset gold highlight. */
+      box-shadow:
+        0 1px 2px rgba(10,25,47,.05),
+        0 4px 12px rgba(10,25,47,.12),
+        0 18px 40px rgba(10,25,47,.22),
+        inset 0 1px 0 rgba(197,160,89,.10);
+      backdrop-filter: blur(14px) saturate(150%);
+      -webkit-backdrop-filter: blur(14px) saturate(150%);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      /* Default = hidden; .visible flips opacity/transform on. Subtle
+         scale on appear/dismiss gives a more "settled in" feel than a
+         pure slide. Easing = out-expo for a luxurious deceleration. */
+      opacity: 0;
+      transform: translateY(20px) scale(.97);
+      pointer-events: none;
+      transition:
+        opacity .5s cubic-bezier(.16, 1, .3, 1),
+        transform .5s cubic-bezier(.16, 1, .3, 1);
+    }
+    .impact-cta-band.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+    /* Hairline gold gradient at the top edge — premium "notification" trim.
+       Inset 16px from each side to sit on the 8px grid. */
+    .impact-cta-band::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 16px; right: 16px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: .7;
+      pointer-events: none;
+    }
+    /* Vertical gold accent bar — classic "investor product / financial
+       dashboard" visual anchor. Replaces the pulsing notification dot
+       with a quieter, more authoritative status mark. 3px wide, full
+       inner height, gold gradient fading down for subtle depth. */
+    .impact-cta-band::after {
+      content: '';
+      position: absolute;
+      top: 16px;
+      bottom: 16px;
+      left: 12px;
+      width: 3px;
+      border-radius: 2px;
+      background: linear-gradient(to bottom, var(--gold), rgba(197,160,89,.3));
+      pointer-events: none;
+    }
+    /* Dismiss × — minimal, integrated; just an icon glyph with subtle
+       opacity. Aligned to the 12px perimeter rhythm shared with the
+       vertical accent bar. */
+    .cta-toast-dismiss {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 24px;
+      height: 24px;
+      background: transparent;
+      border: none;
+      color: var(--text-body);
+      font-size: 1.15rem;
+      line-height: 1;
+      cursor: pointer;
+      opacity: .5;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition:
+        opacity .25s cubic-bezier(.2, .8, .2, 1),
+        transform .25s cubic-bezier(.2, .8, .2, 1);
+    }
+    .cta-toast-dismiss:hover,
+    .cta-toast-dismiss:focus-visible {
+      opacity: 1;
+      transform: scale(1.08);
+    }
+    .cta-toast-dismiss:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+    /* Right padding reserves space for the absolutely-positioned close ×
+       (right:12 + width:24 → 36px from card right; container padding-right
+       20px + this 16px = exactly 36px). */
+    .impact-cta-text { min-width: 0; padding-right: 16px; }
+    .impact-cta-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2.4vw, 1.3rem);
+      /* Heavier weight (700) gives the serif more presence and reads as
+         decisive/business-confident rather than editorial. */
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+      letter-spacing: -.01em;
+      margin: 0;
+    }
+    .impact-cta-text p {
+      font-family: 'DM Sans', sans-serif;
+      /* Bumped from .82rem → .85rem and from var(--text-body) (#8892A4)
+         to rgba(255,255,255,.78) for stronger legibility on the navy
+         background — investor-grade readability. */
+      font-size: .85rem;
+      color: rgba(255,255,255,.78);
+      line-height: 1.55;
+      letter-spacing: 0;
+      margin: 8px 0 0;
+    }
+    /* Pill version of the gold CTA inside the toast. Brand-protected:
+       gold fill, navy text, .78rem font-size — all untouched. A 1px
+       hairline gold divider above (via padding-top + border-top) visually
+       separates "intro" from "action" — a pattern common in investor
+       email templates and product cards. */
+    .impact-cta-band .btn-gold {
+      padding: .7rem 1.45rem;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      border-width: 1px;
+      box-shadow: 0 6px 18px rgba(197,160,89,.28);
+      transition:
+        transform .25s cubic-bezier(.16, 1, .3, 1),
+        box-shadow .25s cubic-bezier(.16, 1, .3, 1),
+        background-color .25s cubic-bezier(.16, 1, .3, 1),
+        border-color .25s cubic-bezier(.16, 1, .3, 1);
+    }
+    .impact-cta-band .btn-gold:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(197,160,89,.4);
+    }
+
+    /* Row container holding the primary Partner With Us CTA + the
+       secondary WhatsApp pill side-by-side beneath the toast copy.
+       Flex-wrap so on very tight widths the pills can stack while
+       keeping the gold CTA visually dominant. */
+    .cta-toast-actions {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      margin-top: 14px;
+      flex-wrap: wrap;
+      align-self: flex-start;
+    }
+
+    /* Outlined WhatsApp companion to .btn-gold inside the toast.
+       Secondary visual weight: transparent fill + gold hairline border
+       + gold text. Same pill shape and uppercase letterspacing as
+       .btn-gold so the pair reads as a coordinated button group. */
+    .btn-whatsapp {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .5rem 1.1rem;
+      background: transparent;
+      border: 1px solid rgba(197,160,89,.4);
+      color: var(--gold);
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .76rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition:
+        background-color .25s cubic-bezier(.16, 1, .3, 1),
+        border-color .25s cubic-bezier(.16, 1, .3, 1),
+        transform .25s cubic-bezier(.16, 1, .3, 1);
+    }
+    .btn-whatsapp:hover {
+      background: rgba(197,160,89,.1);
+      border-color: var(--gold);
+      transform: translateY(-1px);
+    }
+    .btn-whatsapp:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+    .btn-whatsapp svg { display: block; }
+    /* Hairline divider between description and CTA — 1px gold rule at
+       ~25% opacity, inset 4px so it doesn't crowd the rounded corner. */
+    .impact-cta-text::after {
+      content: '';
+      display: block;
+      height: 1px;
+      margin: 16px 4px 0;
+      background: linear-gradient(90deg, rgba(197,160,89,.3), rgba(197,160,89,.05));
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .impact-cta-band { transition: opacity .2s ease; transform: none; }
+      .impact-cta-band.visible { transform: none; }
+    }
+
+    /* Forward looking */
+    .forward-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 1rem; margin-top: 3rem; }
+    .forward-item {
+      background: rgba(255,255,255,.03); border: 1px solid rgba(197,160,89,.1);
+      border-radius: var(--radius); padding: 1.25rem 1rem;
+      text-align: center; transition: border-color var(--tr), transform var(--tr);
+    }
+    .forward-item:hover { border-color: rgba(197,160,89,.3); transform: translateY(-3px); }
+    .forward-icon { font-size: 1.5rem; margin-bottom: .6rem; display: block; }
+    .forward-text { font-size: .78rem; color: var(--text-lt); line-height: 1.5; font-weight: 500; }
+
+    /* ================================================================
+       WHY AFRICA
+    ================================================================ */
+    #why-africa { padding: 3rem 0; background: var(--warm-grey); }
+
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .why-text .about-h2 { color: var(--navy); }
+
+    .why-points { display: flex; flex-direction: column; gap: 1.1rem; margin: 1.75rem 0; }
+    .why-point {
+      display: flex; align-items: flex-start; gap: 1rem;
+      background: var(--white); border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+      box-shadow: 0 2px 12px rgba(10,25,47,.07);
+      border-left: 3px solid var(--gold);
+      transition: transform var(--tr), box-shadow var(--tr);
+    }
+    .why-point:hover { transform: translateX(4px); box-shadow: 0 6px 24px rgba(10,25,47,.12); }
+    .why-point-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .why-point-title { font-size: .9rem; font-weight: 700; color: var(--navy); margin-bottom: .2rem; }
+    .why-point-desc { font-size: .82rem; color: #5a6478; line-height: 1.6; }
+
+    .africa-map-card {
+      position: relative;
+      padding: 2rem 1.75rem 1.5rem;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(197,160,89,.08), transparent 70%),
+        var(--navy);
+      border: 1px solid rgba(197,160,89,.25);
+      border-radius: var(--radius);
+      box-shadow: 0 24px 60px rgba(10,25,47,.25);
+      overflow: hidden;
+    }
+    .africa-map-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(197,160,89,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(197,160,89,.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      opacity: .55;
+      z-index: 0;
+    }
+    .africa-map-svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      aspect-ratio: 500 / 560;
+      position: relative;
+      z-index: 1;
+    }
+    .africa-continent-path,
+    .africa-madagascar-path {
+      fill: url(#africa-continent-grad);
+      stroke: rgba(197,160,89,.55);
+      stroke-width: 1;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+    .africa-dot { transform-box: fill-box; transform-origin: center; }
+    .africa-dot-halo,
+    .africa-dot-core { fill: currentColor; }
+    .africa-dot-halo {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: africa-dot-pulse 2.8s cubic-bezier(.4,0,.2,1) infinite;
+      opacity: 0;
+    }
+    .africa-dot-core {
+      filter: drop-shadow(0 0 4px currentColor);
+    }
+    .africa-dot.dot-active    { color: #C5A059; }
+    .africa-dot.dot-priority  { color: #4a90d9; }
+    .africa-dot.dot-emerging  { color: #5cb85c; }
+    @keyframes africa-dot-pulse {
+      0%   { transform: scale(.5); opacity: .55; }
+      80%  { opacity: 0; }
+      100% { transform: scale(2.6); opacity: 0; }
+    }
+    .africa-dot:nth-child(5n+1) .africa-dot-halo { animation-delay: 0s; }
+    .africa-dot:nth-child(5n+2) .africa-dot-halo { animation-delay: -.6s; }
+    .africa-dot:nth-child(5n+3) .africa-dot-halo { animation-delay: -1.2s; }
+    .africa-dot:nth-child(5n+4) .africa-dot-halo { animation-delay: -1.8s; }
+    .africa-dot:nth-child(5n)   .africa-dot-halo { animation-delay: -2.4s; }
+    @media (prefers-reduced-motion: reduce) {
+      .africa-dot-halo { animation: none; opacity: .25; }
+    }
+    .africa-caption {
+      position: relative;
+      z-index: 1;
+      margin-top: .85rem;
+      text-align: center;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(197,160,89,.78);
+    }
+    .map-legend {
+      position: relative;
+      z-index: 1;
+      margin-top: 1rem;
+      background: rgba(10,25,47,.6);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(197,160,89,.22);
+      border-radius: var(--radius);
+      padding: .85rem 1.1rem;
+      display: flex;
+      gap: .85rem 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .legend-item {
+      display: flex; align-items: center; gap: .55rem;
+      font-size: .76rem; font-weight: 500;
+      color: rgba(212,184,120,.88);
+      letter-spacing: .03em;
+    }
+    .legend-dot {
+      width: .7rem; height: .7rem;
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 0 8px currentColor;
+    }
+
+    /* ================================================================
+       PARTNER
+    ================================================================ */
+    #partner { padding: 3rem 0; background: var(--navy-mid); position: relative; }
+    #partner::before, #partner::after { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: linear-gradient(90deg,transparent,var(--border),transparent); }
+    #partner::before { top: 0; } #partner::after { bottom: 0; }
+
+    .partner-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 5rem; align-items: center; }
+
+    .partner-types { display: flex; flex-direction: column; gap: 1rem; }
+    .partner-type {
+      display: flex; align-items: flex-start; gap: 1.1rem;
+      border: 1px solid rgba(197,160,89,.12); border-radius: var(--radius);
+      padding: 1.25rem 1.5rem; background: rgba(255,255,255,.03);
+      transition: border-color var(--tr), background var(--tr), transform var(--tr);
+    }
+    .partner-type:hover { border-color: rgba(197,160,89,.35); background: rgba(255,255,255,.06); transform: translateX(4px); }
+    .pt-icon { width: 44px; height: 44px; background: rgba(197,160,89,.1); border: 1px solid rgba(197,160,89,.22); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .pt-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .pt-title { font-size: .92rem; font-weight: 600; color: var(--white); margin-bottom: .3rem; }
+    .pt-desc { font-size: .8rem; color: var(--text-body); line-height: 1.6; }
+
+    .partner-form-card {
+      background: rgba(255,255,255,.04); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 2.5rem;
+    }
+    .pfc-title { font-family: 'Cormorant Garamond',serif; font-size: 1.5rem; font-weight: 600; color: var(--white); margin-bottom: .5rem; }
+    .pfc-sub { font-size: .85rem; color: var(--text-body); margin-bottom: 1.75rem; line-height: 1.7; }
+
+    .form-group { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1.1rem; }
+    .form-label { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-body); }
+    .form-input, .form-select, .form-textarea {
+      background: rgba(255,255,255,.05); border: 1.5px solid rgba(197,160,89,.2);
+      border-radius: var(--radius); padding: .8rem 1rem; color: var(--white);
+      font-family: 'DM Sans',sans-serif; font-size: .92rem; outline: none; width: 100%;
+      transition: border-color var(--tr), box-shadow var(--tr);
+    }
+    .form-select option { background: var(--navy-mid); }
+    .form-input::placeholder, .form-textarea::placeholder { color: rgba(136,146,164,.55); }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(197,160,89,.12); }
+    .form-textarea { min-height: 110px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-error { font-size: .74rem; color: #e57373; display: none; }
+    .form-group.has-error .form-input, .form-group.has-error .form-select, .form-group.has-error .form-textarea { border-color: #e57373; }
+    .form-group.has-error .form-error { display: block; }
+
+    .form-success-msg { display: none; background: rgba(197,160,89,.1); border: 1px solid var(--gold); border-radius: var(--radius); padding: .85rem 1rem; color: var(--gold); font-size: .88rem; margin-top: .75rem; }
+    .form-success-msg.visible { display: block; }
+    .compliance-note { font-size: .72rem; color: var(--text-body); margin-top: .75rem; display: flex; align-items: center; gap: .4rem; }
+    .c-dot { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+
+    /* ================================================================
+       TEAM
+    ================================================================ */
+    #team { padding: 3rem 0; background: var(--offwhite); }
+
+    .team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.75rem; }
+    .team-card {
+      background: var(--white); border-radius: var(--radius); overflow: hidden;
+      box-shadow: 0 4px 20px rgba(10,25,47,.08);
+      transition: transform var(--tr), box-shadow var(--tr);
+    }
+    .team-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(10,25,47,.16); }
+    .team-photo { width: 100%; height: 240px; background: var(--navy-mid); position: relative; overflow: hidden; }
+    .team-photo canvas { display: block; }
+    .team-photo-img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
+      display: block;
+      transition: transform var(--tr);
+    }
+    .team-card:hover .team-photo-img { transform: scale(1.04); }
+    .team-body { padding: 1.25rem; }
+    .team-name { font-family: 'Cormorant Garamond',serif; font-size: 1.15rem; font-weight: 600; color: var(--navy); margin-bottom: .2rem; }
+    .team-role { font-size: .75rem; color: var(--gold-dk); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .5rem; }
+    .team-bio { font-size: .8rem; color: #5a6478; line-height: 1.65; }
+
+    /* ================================================================
+       GALLERY
+    ================================================================ */
+    #gallery { padding: 3rem 0; background: var(--navy); }
+
+    .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+    .gallery-item {
+      border-radius: var(--radius); overflow: hidden; position: relative;
+      cursor: default; aspect-ratio: 4/3;
+      transition: transform var(--tr);
+    }
+    .gallery-item:hover { transform: scale(1.02); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-item canvas { display: block; width: 100%; height: 100%; }
+    .gallery-overlay {
+      position: absolute; inset: 0; background: rgba(10,25,47,.55);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity var(--tr);
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay-icon { font-size: 2rem; }
+    .gallery-item.img-fallback {
+      background: linear-gradient(135deg, var(--navy-mid), var(--navy));
+      display: flex; align-items: center; justify-content: center;
+    }
+    .gallery-item.img-fallback::after {
+      content: attr(data-cap);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 600;
+      color: var(--gold); letter-spacing: .04em;
+      text-align: center; padding: 1rem;
+    }
+
+    /* ================================================================
+       CONTACT
+    ================================================================ */
+    #contact { padding: 1.7rem 0; background: var(--offwhite); }
+
+    .contact-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 5rem; align-items: start; }
+    .contact-h2 { font-family: 'Cormorant Garamond',serif; font-size: clamp(1.35rem, 2.1vw, 1.75rem); font-weight: 600; color: var(--navy); line-height: 1.2; margin-bottom: .65rem; overflow-wrap: break-word; }
+    @media (min-width: 900px) { .contact-h2 { white-space: nowrap; } }
+    .contact-sub { color: rgba(10,25,47,.7); font-size: .92rem; line-height: 1.75; margin-bottom: 2rem; }
+
+    /* Retune the eyebrow ("Get In Touch", "Our Offices") for off-white bg.
+       Mirrors the .about-text .section-label override so all off-white
+       sections use the same darker gold for AA-level contrast. */
+    #contact .section-label { color: var(--gold-dk); }
+    #contact .section-label::before,
+    #contact .section-label::after { background: var(--gold-dk); }
+
+    .office-cards { display: flex; flex-direction: column; gap: 1.1rem; }
+    .office-card {
+      background: var(--white); border: 1px solid rgba(10,25,47,.08);
+      border-radius: var(--radius); padding: 1.25rem 1.5rem;
+      box-shadow: 0 4px 20px rgba(10,25,47,.08);
+      transition: transform var(--tr), box-shadow var(--tr);
+    }
+    .office-card:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(10,25,47,.16); }
+    .office-flag { display: inline-block; line-height: 1; vertical-align: -0.18em; margin-right: .55rem; }
+    .flag-svg {
+      display: inline-block;
+      width: 1.5em;
+      height: 1em;
+      vertical-align: -0.18em;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(0,0,0,.08);
+      overflow: hidden;
+    }
+    .office-city { font-family: 'Cormorant Garamond',serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: .3rem; }
+    .office-addr { color: rgba(10,25,47,.7); font-size: .82rem; line-height: 1.7; }
+
+    .contact-info-links { display: flex; flex-direction: column; gap: .85rem; margin-top: 1.5rem; }
+    .cil { display: flex; align-items: center; gap: .85rem; color: rgba(10,25,47,.7); font-size: .88rem; }
+    .cil a { color: var(--navy); text-decoration: none; transition: color var(--tr); font-weight: 500; }
+    .cil a:hover { color: var(--gold-dk); }
+    .cil-icon { width: 34px; height: 34px; background: rgba(197,160,89,.12); border: 1px solid rgba(197,160,89,.2); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .cil-icon svg { width: 15px; height: 15px; stroke: var(--gold-dk); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Contact form: shared .form-* classes are tuned for #partner's navy bg.
+       These overrides retune them for #contact's off-white bg (dark text on
+       white inputs), mirroring the Team section's design language. */
+    #contact .form-label { color: rgba(10,25,47,.7); }
+    #contact .form-input,
+    #contact .form-select,
+    #contact .form-textarea {
+      background: var(--white);
+      border: 1.5px solid rgba(10,25,47,.12);
+      color: var(--navy);
+    }
+    #contact .form-input::placeholder,
+    #contact .form-textarea::placeholder { color: rgba(10,25,47,.38); }
+    #contact .form-input:focus,
+    #contact .form-select:focus,
+    #contact .form-textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(197,160,89,.18); }
+    #contact .form-success-msg { background: rgba(197,160,89,.12); border-color: var(--gold); color: var(--gold-dk); }
+    /* Default .form-error red (#e57373) is tuned for navy bg; darken for
+       sufficient contrast on the off-white #contact background. */
+    #contact .form-error { color: #b00020; }
+    #contact .compliance-note { color: rgba(10,25,47,.7); }
+
+    /* ================================================================
+       FOOTER
+    ================================================================ */
+    footer { background: var(--navy); border-top: 1px solid var(--border); padding: 1rem 0 0; }
+
+    .footer-grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr; gap: 1rem; margin-bottom: .85rem; }
+
+    .footer-brand .nav-logo { font-size: 1.15rem; margin-bottom: .3rem; display: inline-flex; }
+    .footer-brand p { color: var(--text-body); font-size: .76rem; line-height: 1.5; max-width: 270px; margin: 0; }
+
+    .footer-social { display: flex; gap: .45rem; margin-top: .35rem; flex-wrap: wrap; }
+    .soc-link { width: 34px; height: 34px; border-radius: 6px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; text-decoration: none; transition: border-color var(--tr), background var(--tr), transform var(--tr); color: var(--text-body); }
+    .soc-link:hover { border-color: var(--gold); background: rgba(197,160,89,.1); transform: translateY(-2px); }
+    .soc-link svg { width: 14px; height: 14px; fill: var(--text-body); transition: fill var(--tr), stroke var(--tr); }
+    .soc-link:hover svg { fill: var(--gold); }
+    .soc-link svg.soc-stroke { fill: none; stroke: var(--text-body); transition: stroke var(--tr); }
+    .soc-link:hover svg.soc-stroke { stroke: var(--gold); fill: none; }
+
+    .fc-title { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--white); margin: 0 0 .4rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: .25rem; margin: 0; padding: 0; }
+    .footer-links a { text-decoration: none; color: var(--text-body); font-size: .84rem; transition: color var(--tr); }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* Footer contact groups inside the More column — email + phone laid out
+       side by side as two flex columns; wrap to stacked on very narrow widths. */
+    .footer-more-contact { margin-top: .45rem; padding-top: .45rem; border-top: 1px solid var(--border); display: flex; gap: 1rem; flex-wrap: wrap; }
+    .footer-contact-group { display: flex; flex-direction: column; gap: .25rem; flex: 1 1 0; min-width: 140px; }
+    .footer-contact-text { display: inline-block; font-size: .7rem; letter-spacing: .04em; color: var(--gold-dk); text-decoration: none; transition: color var(--tr); overflow-wrap: anywhere; }
+    .footer-contact-text:hover { color: var(--gold); }
+    .footer-contact-icons { display: flex; gap: .35rem; flex-wrap: wrap; }
+    .footer-contact-icons .soc-link { width: 28px; height: 28px; border-radius: 5px; }
+    .footer-contact-icons .soc-link svg { width: 12px; height: 12px; }
+
+    .footer-bottom { border-bottom: 1px solid var(--border); margin-top: 0; padding: .5rem 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-copyright { color: var(--text-body); font-size: .78rem; margin: 0; }
+    .footer-disclaimer { color: #4a5568; font-size: .72rem; max-width: 560px; line-height: 1.7; margin: 0; }
+
+    /* Overflow safety for long unbreakable strings (emails, URLs) */
+    .svc-desc, .impact-desc, .why-point-desc, .pt-desc, .pillar-sub,
+    .office-addr, .team-bio, .about-body, .section-sub, .hero-sub,
+    .footer-disclaimer, .cil a { overflow-wrap: anywhere; }
+    img, canvas { max-width: 100%; }
+
+    /* ================================================================
+       RESPONSIVE
+    ================================================================ */
+
+    /* ── ≤1200px: ensure container has horizontal padding so content
+          never goes edge-to-edge below the desktop max-width ──────── */
+    @media(max-width:1200px) {
+      .container { padding-left: 1.5rem; padding-right: 1.5rem; }
+    }
+
+    /* ── ≤1100px: tablet landscape — collapse 4-up grids to 2-up.
+          Hero stats remain absolute-vertical at this width; they only
+          flatten into a horizontal row at ≤765px (see below). ─────── */
+    @media(max-width:1100px) {
+      .sectors-grid { grid-template-columns: repeat(2,1fr); }
+      .team-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem 1.25rem; }
+      .footer-brand { grid-column: 1 / -1; }
+      .forward-grid { grid-template-columns: repeat(3,1fr); }
+    }
+
+    /* ── ≤1024px: tighten hero so the absolute stats panel and the
+          content column stay balanced on small laptops / tablets-
+          landscape (e.g. iPad 1024×768). Without this the 760px
+          content column + 168px stats panel + base 4rem/3rem padding
+          would total ~1048px and overlap noticeably. ───────────────── */
+    @media(max-width:1024px) {
+      #home .container { padding: 0 1.5rem; }
+      .hero-content { max-width: 580px; }
+      .hero-stats { width: 150px; right: 1.5rem; }
+    }
+
+    /* ── ≤900px: tablet — collapse 2-up content grids to single
+          column. (Navbar stays in its desktop horizontal-pill form
+          all the way down to 769px; mobile takeover happens in the
+          dedicated ≤768px block below.) ──────────────────────────── */
+    @media(max-width:900px) {
+      .about-grid, .why-grid, .partner-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .services-numbered { grid-template-columns: 1fr 1fr; }
+      .impact-grid { grid-template-columns: 1fr 1fr; }
+
+      /* Reduce section vertical padding so total length stays sane */
+      #about, #whatwedo, #sectors, #impact, #why-africa, #partner, #team, #gallery { padding: 2.5rem 0; }
+      .section-header { margin: 0 auto 2.5rem; }
+
+      /* Compact the gaps between sibling sub-sections. (The CTA toast
+         used to sit inline here with margin/max-width overrides; it is
+         now a fixed floating popup — see .impact-cta-band base + the
+         ≤640px / ≤480px popup-positioning blocks below.) */
+      .subsection-spacer { margin-top: 2.25rem; }
+      .forward-grid { margin-top: 2rem; }
+
+      /* About image no longer needs to match a tall text column */
+      .about-img-wrap { min-height: 360px; }
+      .about-img-wrap img { min-height: 360px; }
+
+      /* Africa map SVG — let it scale to container */
+      .africa-map-svg { width: 100%; height: auto; }
+      .africa-map-card { padding: 1.75rem 1.5rem 1.25rem; }
+
+      /* Partner form — tighter padding (toast keeps its own compact padding) */
+      .partner-form-card { padding: 1.75rem; }
+    }
+
+    /* ── ≤768px: MOBILE — the navbar shape changes to the small
+          floating ROUND pill (logo + wordmark on the left, hamburger
+          on the right). This is the SOLE hand-off point: at ≤768 the
+          horizontal menu + Partner CTA are hidden and the hamburger
+          is surfaced, switching the user to the Premium Compact view
+          (#navPremium). The block re-skins the pill (round corners,
+          slightly heavier blur, tighter padding) so it reads as a
+          phone-native floating chip, and bumps the wordmark to
+          1rem since the link cluster no longer competes for space. ── */
+    @media(max-width:768px) {
+      #navbar {
+        position: fixed;
+        top: 12px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: clamp(280px, 56vw, 560px);
+        max-width: 560px;
+        padding: .55rem .65rem .55rem 1.1rem;
+        border-radius: 999px;
+        background: rgba(10,25,47,.85);
+        backdrop-filter: blur(18px) saturate(180%);
+        -webkit-backdrop-filter: blur(18px) saturate(180%);
+        border: 1px solid rgba(197,160,89,.3);
+        box-shadow: 0 8px 24px rgba(10,25,47,.35);
+      }
+      #navbar.scrolled {
+        background: rgba(10,25,47,.92);
+        border-color: rgba(197,160,89,.45);
+        box-shadow: 0 12px 28px rgba(10,25,47,.45);
+      }
+      .nav-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: .5rem;
+        padding: 0;
+      }
+      .nav-logo {
+        gap: .45rem;
+        flex: 0 1 auto;
+        min-width: 0;
+      }
+      .nav-logo span {
+        font-size: 1rem;
+        letter-spacing: .08em;
+      }
+      .nav-logo-img { height: 34px; }
+
+      /* ≤768 is the SOLE hand-off point: hide the horizontal nav-links
+         + Partner CTA and surface the hamburger. Above 768px these
+         stay visible and the hamburger stays hidden — the full
+         lockup fits on one row down to the 769px laptop floor. */
+      .nav-links { display: none !important; }
+      .nav-cta { display: none !important; }
+      .hamburger { display: flex; }
+
+      /* Hero just needs to clear the floating pill (~46px tall + 12px
+         top offset). No longer the tall vertical-card padding. */
+      #home {
+        min-height: 100vh;
+        padding-top: clamp(90px, 16vw, 130px);
+      }
+    }
+
+    /* ── ≤765px: phone landscape / small tablet portrait — flatten
+          the hero stats panel from absolute-vertical (right side of
+          hero) into a static horizontal row beneath the content.
+          Above 765px the panel keeps its desktop floating-column
+          design; below 765px it stacks under .hero-content as 3
+          columns (with vertical dividers until ≤640px, where they
+          hide and the grid becomes a clean 3-up). ───────────────── */
+    @media(max-width:765px) {
+      /* Stats panel is absolutely positioned at desktop sizes; once
+         it goes static it would otherwise become a flex sibling of
+         .container and squeeze the hero text. Switching #home to a
+         column flex container lets the static stats panel drop
+         beneath the container instead. */
+      #home { flex-direction: column; align-items: stretch; }
+      #home .container { padding: 0 2rem; }
+      .hero-content { max-width: none; }
+      .hero-stats {
+        position: static;
+        top: auto; right: auto; left: auto;
+        transform: none;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr auto 1fr;
+        align-items: center;
+        gap: clamp(0.5rem, 2vw, 1.5rem);
+        margin: 2.5rem 2rem 0; padding: 1.25rem 2rem;
+        animation: float 4s ease-in-out infinite;
+        width: auto;
+      }
+      /* Divider was a horizontal hairline between vertically-stacked
+         stats; in the horizontal row it becomes a vertical hairline
+         between columns. */
+      .hstat-div { width: 1px; height: 2.5rem; }
+    }
+
+    /* ── ≤700px: small tablet / large phone landscape ────────────── */
+    @media(max-width:700px) {
+      .container { padding-left: 1.25rem; padding-right: 1.25rem; }
+      #home .container { padding: 0 1.25rem; }
+
+      /* Hero spacing — preserve the large top padding from the
+         ≤768px vertical-navbar block; only override the bottom. */
+      #home { padding-bottom: 1.5rem; }
+      .hero-stats { margin: 2rem 1.25rem 0; gap: 1.5rem; padding: 1.1rem 1.25rem; }
+      .hero-btns { margin-bottom: 2.5rem; }
+
+      /* Sections further compacted */
+      #about, #whatwedo, #sectors, #impact, #why-africa, #partner, #team, #gallery { padding: 2.25rem 0; }
+      #contact { padding: 1.5rem 0; }
+      .section-header { margin: 0 auto 2rem; }
+
+      /* Ticker: smaller + a touch faster */
+      .ticker { padding: .6rem 0; font-size: .72rem; }
+      .ticker-track { animation: tick 24s linear infinite; gap: 1.5rem; }
+
+      /* About image: shorter */
+      .about-img-wrap, .about-img-wrap img { min-height: 300px; }
+
+      /* Intermediate grids */
+      .sectors-grid { grid-template-columns: repeat(2,1fr); }
+      .team-grid { grid-template-columns: repeat(2,1fr); }
+      .gallery-grid { grid-template-columns: repeat(2,1fr); }
+
+      /* (CTA toast is now a fixed floating popup; its layout is column
+         by default + adapts at ≤640px / ≤480px — no 700px override.) */
+
+      /* Map legend tighter */
+      .map-legend { padding: .7rem .9rem; gap: .65rem 1.1rem; margin-top: .75rem; }
+      .legend-item { font-size: .7rem; }
+      .africa-caption { font-size: .62rem; letter-spacing: .16em; margin-top: .65rem; }
+
+      /* Service card padding — tighten from desktop 1.5rem to a slightly more
+         compact mid-tier between desktop (1.5rem) and phone (1rem 1.1rem). The
+         2x2 media-object grid layout is inherited from the base. */
+      .svc-card { padding: 1.25rem 1.3rem; gap: .4rem 1.1rem; }
+
+      /* Why points smaller */
+      .why-point { padding: 1rem 1.1rem; }
+    }
+
+    /* ── ≤640px: phone — collapse remaining multi-column grids ───── */
+    @media(max-width:640px) {
+      .sectors-grid, .team-grid, .gallery-grid { grid-template-columns: 1fr; }
+      .services-numbered { grid-template-columns: 1fr; }
+      .impact-grid { grid-template-columns: 1fr; }
+      .serve-grid { grid-template-columns: 1fr 1fr; }
+      .forward-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { gap: 1rem .85rem; margin-bottom: .9rem; }
+
+      /* Pull headers and sibling sub-sections tighter on phones */
+      .section-header { margin: 0 auto 1.25rem; }
+      .subsection-spacer { margin-top: 1.5rem; }
+      .forward-grid { margin-top: 1.75rem; }
+
+      /* Floating CTA toast: re-anchor to bottom-center so it spans the
+         available width minus side margins instead of hugging the right
+         edge (which feels cramped on phones). All insets on the 8px grid. */
+      .impact-cta-band {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        max-width: none;
+        width: auto;
+      }
+      .about-pillars { margin: 1.25rem 0; }
+      .hero-btns { flex-direction: column; align-items: stretch; gap: .75rem; }
+      .hero-btns .btn-gold, .hero-btns .btn-outline { justify-content: center; }
+      .hero-stats { grid-template-columns: repeat(3, 1fr); gap: clamp(0.5rem, 2vw, 1.25rem); padding: 1.25rem 1rem; }
+      .hstat-div { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+      .about-pillars { grid-template-columns: 1fr; }
+
+      /* Service cards → horizontal media-object layout (number+icon | title+desc) */
+      .svc-card {
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        grid-template-areas:
+          "num   title"
+          "icon  desc";
+        gap: .35rem 1rem;
+        padding: 1rem 1.1rem;
+        align-items: start;
+      }
+      .svc-num { grid-area: num; font-size: 1.8rem; line-height: 1; margin: 0; }
+      .svc-icon { grid-area: icon; width: 44px; height: 44px; margin: 0; }
+      .svc-icon svg { width: 22px; height: 22px; }
+      .svc-title { grid-area: title; font-size: 1.05rem; line-height: 1.25; margin: 0 0 .35rem; }
+      .svc-desc { grid-area: desc; font-size: .82rem; line-height: 1.55; margin: 0; }
+
+      /* Impact card densities */
+      .impact-stat { padding: 1.5rem 1.25rem; }
+      .impact-val { font-size: 2.2rem; }
+
+      /* Partner + office cards */
+      .partner-form-card { padding: 1.5rem; }
+      .office-card { padding: 1rem 1.25rem; }
+
+      /* Footer bottom stack */
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: .5rem; padding: .5rem 0; }
+    }
+
+    /* ── ≤620px: navbar-only bridge. Between this width and ≤480 the
+          mobile pill hits its 280px floor while the looser ≤768
+          chrome (wordmark .92rem, WhatsApp 32px, hamburger 36px) is
+          still in force — that combination overflows the pill and
+          the wordmark visually overlaps the WhatsApp/hamburger
+          cluster. This block tightens wordmark font, actions, gaps
+          and pill padding so the full lockup fits cleanly across
+          the 481–620 range. The ≤480 / ≤380 / ≤350 blocks below
+          continue to ratchet things down further for narrower
+          devices. Nothing outside the navbar is touched here. ── */
+    @media(max-width:620px) {
+      #navbar { padding: .55rem .55rem .55rem .95rem; }
+      #navbar.scrolled { padding: .55rem .55rem .55rem .95rem; }
+      .nav-inner { gap: .3rem; }
+      .nav-logo { gap: .35rem; }
+      .nav-logo span { font-size: .82rem; letter-spacing: .04em; }
+      .nav-logo-img { height: 30px; }
+      .nav-actions { gap: .3rem; }
+      .nav-whatsapp { width: 30px; height: 30px; }
+      .nav-whatsapp svg { width: 14px; height: 14px; }
+      .hamburger { width: 32px; height: 32px; }
+    }
+
+    /* ── ≤480px: standard phone portrait ─────────────────────────── */
+    @media(max-width:480px) {
+      .container { padding-left: 1rem; padding-right: 1rem; }
+      #home .container { padding: 0 1rem; }
+
+      /* Pill navbar (Architecture A restored) — tighten on standard
+         phone portrait so the logo + wordmark + hamburger comfortably
+         fit inside a slim floating pill. */
+      #navbar {
+        width: clamp(260px, 70vw, 360px);
+        padding: .5rem .55rem .5rem 1rem;
+      }
+      #navbar.scrolled { padding: .5rem .55rem .5rem 1rem; }
+      .nav-inner { gap: .35rem; }
+      .nav-logo { gap: .4rem; }
+      .nav-logo span { font-size: .82rem; letter-spacing: .05em; }
+      .nav-logo-img { height: 30px; }
+      .nav-actions { gap: .3rem; }
+      .nav-whatsapp { width: 30px; height: 30px; }
+      .nav-whatsapp svg { width: 14px; height: 14px; }
+      .hamburger { width: 32px; height: 32px; }
+
+      /* Hero clears the small pill nav — no longer needs the tall
+         top padding the previous vertical-card layout required. */
+      #home { padding: clamp(80px, 18vw, 110px) 0 1.25rem; }
+      .hero-content { padding-top: 1rem; }
+      .hero-eyebrow { letter-spacing: .18em; gap: .55rem; margin-bottom: 1rem; }
+      .hero-eyebrow::before { width: 1.75rem; }
+      .hero-h1 { margin-bottom: 1rem; }
+      .hero-sub { margin-bottom: 1.75rem; line-height: 1.7; }
+      .hero-btns { margin-bottom: 2.25rem; }
+      .hero-stats { gap: clamp(0.4rem, 1.5vw, .85rem); padding: 1rem .75rem; margin: 1.75rem 1rem 0; }
+      .hstat-val { font-size: clamp(1.1rem, 4.5vw, 1.65rem); }
+      .hstat-lbl { font-size: clamp(.55rem, 1.4vw, .68rem); letter-spacing: .1em; margin-top: .35rem; }
+
+      /* Buttons softer */
+      .btn-gold, .btn-outline { padding: .8rem 1.5rem; font-size: .84rem; }
+      .btn-outline-gold { padding: .7rem 1.5rem; font-size: .82rem; }
+
+      /* Sections: even tighter padding so the page reads "tight but
+         breathable" on a 480px viewport — large white bands removed. */
+      #about, #whatwedo, #sectors, #impact, #why-africa, #partner, #team, #gallery { padding: 1.5rem 0; }
+      .section-header { margin: 0 auto 1rem; }
+      .subsection-spacer { margin-top: 1rem; }
+      .forward-grid { margin-top: 1.25rem; }
+      .about-pillars { margin: 1rem 0; }
+
+      /* Ticker tiny */
+      .ticker { padding: .55rem 0; font-size: .68rem; }
+      .ticker-track { gap: 1.25rem; animation-duration: 20s; }
+
+      /* About image */
+      .about-img-wrap, .about-img-wrap img { min-height: 240px; }
+      .about-img-badge { bottom: 1rem; left: 1rem; padding: .75rem 1rem; }
+      .badge-num { font-size: 1.75rem; }
+      .badge-txt { font-size: .65rem; }
+
+      /* Serve / forward → single column */
+      .serve-grid, .forward-grid { grid-template-columns: 1fr; }
+
+      /* (Service-card sizing handled by ≤640px horizontal layout — don't override here.) */
+      /* Toast: tighter padding + softer corner on standard phone portrait.
+         All values stay on the 8px rhythm (16/24). Text gets an extra
+         8px of right padding to keep clearance from the close × at 12,12
+         when the container's outer right padding shrinks to 16px. */
+      .impact-cta-band {
+        padding: 18px 16px 16px 26px;
+        border-radius: 12px;
+      }
+      .impact-cta-text { padding-right: 24px; }
+
+      /* Partner form */
+      .partner-form-card { padding: 1.25rem; }
+      .pfc-title { font-size: 1.3rem; }
+      .form-input, .form-select, .form-textarea { font-size: .9rem; padding: .7rem .9rem; }
+
+      /* Contact */
+      #contact { padding: 1.25rem 0; }
+      .office-card { padding: 1rem; }
+      .office-city { font-size: 1rem; }
+      .office-addr { font-size: .78rem; }
+
+      /* Map legend extra compact */
+      .map-legend { padding: .65rem .85rem; gap: .65rem; }
+      .legend-item { font-size: .64rem; }
+
+      /* Footer */
+      footer { padding: .5rem 0 0; }
+      .footer-grid { gap: 1rem; margin-bottom: .85rem; }
+      .footer-disclaimer { font-size: .68rem; }
+
+      /* Why points + partner types compact */
+      .why-point { padding: .9rem 1rem; gap: .75rem; }
+      .partner-type { padding: 1rem 1.1rem; gap: .9rem; }
+      .pt-icon { width: 38px; height: 38px; }
+    }
+
+    /* ── ≤380px: tiny phones (e.g. iPhone SE 1st gen, Galaxy Fold) ─ */
+    @media(max-width:380px) {
+      /* Pill navbar tightens further on very narrow screens. */
+      #navbar {
+        width: 82vw;
+        max-width: 310px;
+        padding: .45rem .5rem .45rem .9rem;
+      }
+      #navbar.scrolled { padding: .45rem .5rem .45rem .9rem; }
+      .nav-inner { gap: .3rem; }
+      .nav-logo { gap: .35rem; }
+      .nav-logo span { font-size: .76rem; letter-spacing: .04em; }
+      .nav-logo-img { height: 28px; }
+      .nav-actions { gap: .25rem; }
+      .nav-whatsapp { width: 28px; height: 28px; }
+      .nav-whatsapp svg { width: 13px; height: 13px; }
+      .hamburger { width: 30px; height: 30px; }
+
+      .hero-h1 { font-size: clamp(1.6rem, 8vw, 2.2rem); line-height: 1.15; }
+      .hero-sub { font-size: .9rem; }
+      .btn-gold, .btn-outline { padding: .72rem 1.25rem; font-size: .8rem; }
+      .ticker { font-size: .64rem; }
+      .about-h2, .section-h2 { font-size: 1.55rem; }
+      .contact-h2 { font-size: 1.55rem; }
+      .pfc-title { font-size: 1.2rem; }
+      .impact-cta-text h3 { font-size: 1.25rem; }
+      .badge-num { font-size: 1.5rem; }
+
+      /* Service cards: shrink left column further, keep media-object intact */
+      .svc-card { grid-template-columns: 48px 1fr; padding: .9rem 1rem; gap: .25rem .85rem; }
+      .svc-num { font-size: 1.55rem; }
+      .svc-icon { width: 38px; height: 38px; }
+      .svc-icon svg { width: 20px; height: 20px; }
+      .svc-title { font-size: 1rem; }
+      .svc-desc { font-size: .78rem; }
+    }
+
+    /* ── ≤350px: ultra-narrow phones (older Androids, Galaxy Fold cover).
+          Everything (logo + wordmark + WhatsApp + hamburger) is shrunk
+          and tightened so the full set fits. The WhatsApp pill stays
+          visible — the wordmark, logo image, hamburger, and pill chrome
+          step down so the four elements share the row without overlap. */
+    @media (max-width: 350px) {
+      #navbar {
+        width: 94vw;
+        max-width: 330px;
+        padding: .42rem .42rem .42rem .7rem;
+      }
+      #navbar.scrolled { padding: .42rem .42rem .42rem .7rem; }
+      .nav-inner { gap: .3rem; }
+      .nav-actions { gap: .25rem; }
+      .nav-logo { gap: .3rem; }
+      .nav-logo span { font-size: .72rem; letter-spacing: .04em; }
+      .nav-logo-img { height: 24px; }
+      .nav-whatsapp { width: 28px; height: 28px; }
+      .nav-whatsapp svg { width: 13px; height: 13px; }
+      .hamburger { width: 28px; height: 28px; border-radius: 7px; }
+      .hamburger span { width: 14px; height: 1.25px; }
+    }
+
+    /* ── Landscape phones (height ≤480px): pill navbar stays compact;
+          the hamburger opens the Premium Compact view, so no special
+          grid is needed. Placed last so it overrides earlier
+          width-based ≤480 / ≤380 padding declarations on #home. ── */
+    @media (max-width: 768px) and (max-height: 480px) {
+      #navbar {
+        top: 10px;
+        width: clamp(280px, 58vw, 440px);
+        max-width: 440px;
+        min-width: 280px;
+        padding: .45rem .55rem .45rem 1rem;
+      }
+      #navbar.scrolled { padding: .45rem .55rem .45rem 1rem; }
+      .nav-inner { gap: .4rem; }
+      .nav-logo span { font-size: .92rem; letter-spacing: .06em; }
+      .nav-logo-img { height: 30px; }
+      /* Override the wider portrait padding-top with a shorter
+         landscape value so the navbar + hero copy share the
+         vertical real estate sensibly. */
+      #home { padding: clamp(80px, 18vw, 110px) 0 1rem; min-height: 100vh; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================= NAV ============================= -->
+<header>
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo" aria-label="Veridian Capital Partners home">
+        <img src="logo.png" alt="Veridian Capital Partners logo" class="nav-logo-img"/>
+        <span>VERIDIAN CAPITAL</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#whatwedo">What We Do</a></li>
+        <li><a href="#sectors">Key Sectors</a></li>
+        <li><a href="#impact">Our Impact</a></li>
+        <li><a href="#why-africa">Why Africa</a></li>
+      </ul>
+      <a href="#partner" class="nav-cta">Partner With Us</a>
+      <div class="nav-actions">
+        <a class="nav-whatsapp" href="https://wa.me/233548191278?text=Hello%20Veridian%20Capital%20Partners%20%E2%80%94%20I%20would%20like%20to%20discuss%20a%20potential%20advisory%20engagement%20and%20learn%20more%20about%20your%20investment%20facilitation%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.03 0C5.45 0 .1 5.34.1 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.93 11.93 0 0 0 5.72 1.46h.01c6.58 0 11.93-5.34 11.93-11.91 0-3.18-1.24-6.17-3.44-8.42zM12.03 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.52-5.27c0-5.46 4.45-9.9 9.92-9.9 2.65 0 5.14 1.03 7.01 2.9a9.84 9.84 0 0 1 2.9 7.01c0 5.46-4.45 9.9-9.92 9.9zm5.44-7.42c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
+        </a>
+        <button class="hamburger" id="hambBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Premium Compact menu — mobile-only navigation surface (≤768px),
+       triggered by the hamburger button (#hambBtn). On every laptop
+       viewport (≥769px) the inline nav-links + Partner CTA take over
+       and the hamburger is CSS-hidden, so this card is unreachable
+       above 768px. A centered card with the menu items stacked
+       vertically + a gold pill CTA + close button. Closes on
+       hamburger toggle, outside click, close-button click, or Esc. -->
+  <div id="navPremium" class="nav-premium" role="navigation" aria-label="Premium menu" aria-hidden="true">
+    <button class="nav-premium-close" type="button" aria-label="Close menu">&times;</button>
+    <ul class="nav-premium-list" role="list">
+      <li><a href="#home" class="nav-premium-link">Home</a></li>
+      <li><a href="#about" class="nav-premium-link">About Us</a></li>
+      <li><a href="#whatwedo" class="nav-premium-link">What We Do</a></li>
+      <li><a href="#sectors" class="nav-premium-link">Key Sectors</a></li>
+      <li><a href="#impact" class="nav-premium-link">Our Impact</a></li>
+      <li><a href="#why-africa" class="nav-premium-link">Why Africa</a></li>
+    </ul>
+    <a href="#partner" class="nav-premium-cta">Partner With Us</a>
+  </div>
+</header>
+
+<main>
+<!-- ============================= HERO ============================= -->
+<section id="home" aria-labelledby="hero-h1">
+  <div class="hero-img" aria-hidden="true"></div>
+  <canvas class="hero-particle" id="heroCanvas" aria-hidden="true"></canvas>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">Est. 2010 · Global Investment Facilitation</div>
+      <h1 id="hero-h1" class="hero-h1 reveal d1">
+        Bridging Global Capital<br>with <em>Africa's Potential.</em>
+      </h1>
+      <p class="hero-sub reveal d2">
+        An international investment advisory and market-access platform connecting institutional investors, corporations, and entrepreneurs with verified, high-impact opportunities across Africa's 54 markets.
+      </p>
+      <div class="hero-btns reveal d3">
+        <a href="#sectors" class="btn-gold">Explore Key Sectors ↗</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-stats reveal d4">
+    <div class="hstat">
+      <span class="hstat-val">$2.8B+</span>
+      <span class="hstat-lbl">Facilitated Investment</span>
+    </div>
+    <div class="hstat-div" aria-hidden="true"></div>
+    <div class="hstat">
+      <span class="hstat-val">54</span>
+      <span class="hstat-lbl">African Markets</span>
+    </div>
+    <div class="hstat-div" aria-hidden="true"></div>
+    <div class="hstat">
+      <span class="hstat-val">120+</span>
+      <span class="hstat-lbl">Strategic Partnerships</span>
+    </div>
+  </div>
+
+</section>
+
+<!-- TICKER STRIP -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span class="ticker-item">🌍 Agriculture &amp; Agribusiness</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">⚡ Renewable Energy</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">🏗 Infrastructure Development</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">💻 Technology &amp; Innovation</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">⛏ Mining &amp; Natural Resources</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">🏦 Financial Services</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">✈ Tourism &amp; Hospitality</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">🌿 ESG &amp; Sustainable Development</span>
+    <span class="ticker-sep">|</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="ticker-item">🌍 Agriculture &amp; Agribusiness</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">⚡ Renewable Energy</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">🏗 Infrastructure Development</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">💻 Technology &amp; Innovation</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">⛏ Mining &amp; Natural Resources</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">🏦 Financial Services</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">✈ Tourism &amp; Hospitality</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">🌿 ESG &amp; Sustainable Development</span>
+    <span class="ticker-sep">|</span>
+  </div>
+</div>
+
+<!-- ============================= ABOUT ============================= -->
+<section id="about" aria-labelledby="about-h2">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Image left -->
+      <div class="about-img-wrap reveal">
+        <img src="about_boardroom.png" alt="Veridian Capital Partners executive team in a boardroom meeting" loading="lazy"/>
+        <div class="about-img-badge">
+          <p class="badge-num">54</p>
+          <p class="badge-txt">African Nations</p>
+        </div>
+      </div>
+
+      <!-- Text right -->
+      <div class="about-text">
+        <span class="section-label left-only reveal">About Us</span>
+        <h2 id="about-h2" class="about-h2 reveal d1">
+          Your Strategic Gateway<br>to African Markets
+        </h2>
+        <p class="about-body reveal d2">
+          Founded in 2010, Veridian Capital Partners is an international investment facilitation and strategic advisory firm with dual headquarters in London and Johannesburg. We serve as a trusted gateway for global investors, corporations, development institutions, and diaspora professionals seeking structured, de-risked access to Africa's most dynamic growth markets.
+        </p>
+        <p class="about-body reveal d2">
+          Our competitive advantage lies in combining deep continental market intelligence with an extensive on-the-ground network across all 54 African nations — enabling us to source, structure, and deliver opportunities that generate both financial returns and lasting societal impact.
+        </p>
+
+        <div class="about-pillars reveal d3">
+          <div class="pillar">
+            <span class="pillar-icon">🏛</span>
+            <div>
+              <div class="pillar-title">100% Independent Advisory</div>
+              <div class="pillar-sub">No proprietary products, pure fiduciary counsel</div>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">🌐</span>
+            <div>
+              <div class="pillar-title">Pan-African Reach</div>
+              <div class="pillar-sub">Active presence in 30+ countries</div>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">⚖</span>
+            <div>
+              <div class="pillar-title">ESG-Aligned Mandates</div>
+              <div class="pillar-sub">All engagements meet international standards</div>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">🤝</span>
+            <div>
+              <div class="pillar-title">Verified Opportunity Network</div>
+              <div class="pillar-sub">Rigorous due diligence on every project</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#partner" class="btn-gold reveal d4">Partner With Us →</a>
+      </div>
+    </div>
+
+    <!-- Who we serve -->
+    <div class="subsection-spacer">
+      <div class="section-header">
+        <span class="section-label reveal">Who We Serve</span>
+        <h3 class="section-h2 dark reveal d1" style="font-size:1.8rem;">Our Clients &amp; Partners</h3>
+      </div>
+      <div class="serve-grid reveal d2">
+        <div class="serve-item">
+          <div class="serve-icon">🏦</div>
+          <div class="serve-title">Institutional Investors</div>
+          <div class="serve-desc">High-return, risk-adjusted African opportunities</div>
+        </div>
+        <div class="serve-item">
+          <div class="serve-icon">🏢</div>
+          <div class="serve-title">Multinational Corporations</div>
+          <div class="serve-desc">Market entry and continental expansion support</div>
+        </div>
+        <div class="serve-item">
+          <div class="serve-icon">🏛</div>
+          <div class="serve-title">Government Institutions</div>
+          <div class="serve-desc">Public-private partnership development</div>
+        </div>
+        <div class="serve-item">
+          <div class="serve-icon">🚀</div>
+          <div class="serve-title">Entrepreneurs &amp; SMEs</div>
+          <div class="serve-desc">Cross-border growth and scaling solutions</div>
+        </div>
+        <div class="serve-item">
+          <div class="serve-icon">🌍</div>
+          <div class="serve-title">Diaspora Investors</div>
+          <div class="serve-desc">Structured pathways for home-country reinvestment</div>
+        </div>
+        <div class="serve-item">
+          <div class="serve-icon">🌱</div>
+          <div class="serve-title">Development Organizations</div>
+          <div class="serve-desc">Sustainable transformation &amp; SDG-aligned initiatives</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= WHAT WE DO ============================= -->
+<section id="whatwedo" aria-labelledby="wwd-h2">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label reveal">Our Services</span>
+      <h2 id="wwd-h2" class="section-h2 reveal d1">What We Do</h2>
+      <p class="section-sub reveal d2">From investment facilitation to on-the-ground market presence — comprehensive solutions across the full investment lifecycle.</p>
+    </div>
+
+    <div class="services-numbered">
+
+      <div class="svc-card reveal">
+        <div class="svc-num">01</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        </div>
+        <h3 class="svc-title">Investment Facilitation &amp; Matchmaking</h3>
+        <p class="svc-desc">We connect vetted, high-yield African investment opportunities with institutional and private investors — including government-backed projects, growth-stage companies, and scalable ventures across priority sectors.</p>
+      </div>
+
+      <div class="svc-card reveal d1">
+        <div class="svc-num">02</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3 class="svc-title">Market Entry &amp; Business Development</h3>
+        <p class="svc-desc">We guide foreign companies and local enterprises through market expansion — from strategy formulation and compliance to local partner sourcing, registration, and operational setup across any African jurisdiction.</p>
+      </div>
+
+      <div class="svc-card reveal d2">
+        <div class="svc-num">03</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/></svg>
+        </div>
+        <h3 class="svc-title">Strategic Advisory &amp; Feasibility Studies</h3>
+        <p class="svc-desc">Our experts conduct detailed financial modelling, due diligence, market intelligence, and risk assessments to validate opportunities and craft well-informed, bankable investment decisions.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">04</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="svc-title">Project Origination &amp; Structuring</h3>
+        <p class="svc-desc">We source, design, and structure bankable investment projects ready for funding or co-development across infrastructure, energy, agribusiness, technology, manufacturing, and more.</p>
+      </div>
+
+      <div class="svc-card reveal d1">
+        <div class="svc-num">05</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="svc-title">Joint Venture &amp; Partnership Facilitation</h3>
+        <p class="svc-desc">We broker strategic alliances between international capital, development agencies, local firms, and governments — ensuring aligned interests, structured agreements, and shared long-term value.</p>
+      </div>
+
+      <div class="svc-card reveal d2">
+        <div class="svc-num">06</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="svc-title">Capital Raising &amp; Financial Structuring</h3>
+        <p class="svc-desc">We support African enterprises in accessing the right financing blend — equity, debt, grants, or blended finance — by preparing investment-ready documentation and engaging global capital providers.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">07</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3 class="svc-title">Diaspora Investment Services</h3>
+        <p class="svc-desc">We help African diaspora professionals and investors identify secure, high-impact channels for reinvestment — providing structured pathways to contribute to economic development in their countries of origin.</p>
+      </div>
+
+      <div class="svc-card reveal d1">
+        <div class="svc-num">08</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 class="svc-title">Local Representation &amp; Market Presence</h3>
+        <p class="svc-desc">As your boots-on-the-ground partner, we act as your in-country representative — managing stakeholder engagement, regulatory navigation, brand visibility, and local team oversight.</p>
+      </div>
+
+      <div class="svc-card reveal d2">
+        <div class="svc-num">09</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 20h.01M7 20v-4"/><path d="M12 20v-8"/><path d="M17 20V8"/><path d="M22 4v16"/></svg>
+        </div>
+        <h3 class="svc-title">ESG Monitoring &amp; Impact Reporting</h3>
+        <p class="svc-desc">We help you measure and manage the economic, social, and environmental outcomes of your investments — aligning with global ESG standards, the SDGs, and local development agendas for responsible investing.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================= KEY SECTORS ============================= -->
+<section id="sectors" aria-labelledby="sectors-h2">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label reveal">Sectors We Serve</span>
+      <h2 id="sectors-h2" class="section-h2 dark reveal d1">Key Investment Sectors</h2>
+      <p class="section-sub dark reveal d2">We operate across all major sectors driving Africa's economic transformation and long-term growth.</p>
+    </div>
+
+    <div class="sectors-grid" id="sectorsGrid">
+      <!-- Sector cards rendered by renderSectors() from the `sectors` array. -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================= OUR IMPACT ============================= -->
+<section id="impact" aria-labelledby="impact-h2">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label reveal">Proven Results</span>
+      <h2 id="impact-h2" class="section-h2 reveal d1">Our Impact</h2>
+      <p class="section-sub reveal d2">Our work goes beyond transactions — it drives real, lasting transformation across communities and economies throughout the African continent.</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-stat reveal">
+        <span class="impact-val" data-count="2.8" data-suffix="B+">$0B</span>
+        <div class="impact-label">Facilitated in Investment Value</div>
+        <div class="impact-desc">Global capital connected to viable, high-growth projects across 30+ African countries — from renewables to infrastructure and agri-value chains.</div>
+      </div>
+      <div class="impact-stat reveal d1">
+        <span class="impact-val" data-count="120" data-suffix="+">0</span>
+        <div class="impact-label">Strategic Partnerships Brokered</div>
+        <div class="impact-desc">Joint ventures between African businesses and international firms — connecting local potential with global expertise and capital.</div>
+      </div>
+      <div class="impact-stat reveal d2">
+        <span class="impact-val" data-count="30" data-suffix="+">0</span>
+        <div class="impact-label">Government Partnerships Enabled</div>
+        <div class="impact-desc">Public-Private Partnerships, policy dialogue, and bilateral investment deals facilitated across multiple jurisdictions.</div>
+      </div>
+      <div class="impact-stat reveal">
+        <span class="impact-val" data-count="54">0</span>
+        <div class="impact-label">Countries · Active Coverage</div>
+        <div class="impact-desc">Operating across all 54 African nations — ensuring every investment has both profit and purpose, creating shared value between investors and communities.</div>
+      </div>
+      <div class="impact-stat reveal d1">
+        <span class="impact-val" data-count="50000" data-suffix="+">0</span>
+        <div class="impact-label">Jobs Created or Supported</div>
+        <div class="impact-desc">Through investor facilitation and local business development, generating employment opportunities — especially among youth and women.</div>
+      </div>
+      <div class="impact-stat reveal d2">
+        <span class="impact-val" data-count="15" data-suffix="+">0</span>
+        <div class="impact-label">Years of Market Excellence</div>
+        <div class="impact-desc">Over a decade of building trusted relationships between global capital and Africa's most dynamic entrepreneurs and institutions.</div>
+      </div>
+    </div>
+
+    <!-- Forward looking -->
+    <div class="subsection-spacer">
+      <div class="section-header">
+        <span class="section-label reveal">Looking Forward</span>
+        <h3 class="section-h2 reveal d1" style="font-size:1.8rem;">Our $10 Billion Vision</h3>
+        <p class="section-sub reveal d2">Over the next five years, we aim to unlock $10B in new investments with focus areas that will define Africa's future.</p>
+      </div>
+      <div class="forward-grid">
+        <div class="forward-item reveal"><span class="forward-icon">💡</span><div class="forward-text">Digital Innovation &amp; Fintech</div></div>
+        <div class="forward-item reveal d1"><span class="forward-icon">🌾</span><div class="forward-text">Food &amp; Energy Security</div></div>
+        <div class="forward-item reveal d2"><span class="forward-icon">🏗</span><div class="forward-text">Green Infrastructure</div></div>
+        <div class="forward-item reveal d3"><span class="forward-icon">🚀</span><div class="forward-text">SME Acceleration</div></div>
+        <div class="forward-item reveal d4"><span class="forward-icon">🔗</span><div class="forward-text">Cross-Border Trade Integration</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================= WHY AFRICA ============================= -->
+<section id="why-africa" aria-labelledby="wa-h2">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-text">
+        <span class="section-label left-only reveal">The Opportunity</span>
+        <h2 id="wa-h2" class="about-h2 reveal d1">Why Africa — and Why Now?</h2>
+        <p class="about-body reveal d2">
+          Africa is home to the world's fastest-growing economies, youngest population, and most abundant natural resources. With a combined GDP exceeding $3 trillion, a middle class of over 350 million, and rapid urbanisation reshaping demand, the continent represents one of the last great frontiers for sustainable, high-return investment.
+        </p>
+
+        <div class="why-points reveal d2">
+          <div class="why-point">
+            <div class="why-point-icon">📈</div>
+            <div>
+              <div class="why-point-title">Fastest-Growing Consumer Markets</div>
+              <div class="why-point-desc">Africa's consumer spending is projected to exceed $2.5 trillion by 2030, driven by a rapidly expanding urban middle class.</div>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon">🌍</div>
+            <div>
+              <div class="why-point-title">The African Continental Free Trade Area</div>
+              <div class="why-point-desc">AfCFTA — the world's largest free trade zone by participating nations — is unlocking intra-African trade and cross-border investment at scale.</div>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon">⚡</div>
+            <div>
+              <div class="why-point-title">Renewables Leadership</div>
+              <div class="why-point-desc">Africa holds 60% of the world's best solar resources and massive untapped wind and hydro potential — a strategic advantage in the energy transition.</div>
+            </div>
+          </div>
+          
+        </div>
+
+        <a href="#contact" class="btn-outline-gold reveal d3">Let's Connect→</a>
+      </div>
+
+      <div class="africa-map-card reveal d1">
+        <svg class="africa-map-svg" viewBox="0 0 500 560" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="Map of Africa showing active investment coverage across 54 nations">
+          <defs>
+            <linearGradient id="africa-continent-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1a3556"/>
+              <stop offset="100%" stop-color="#0f1f3a"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Continent: hand-tuned bezier silhouette (clockwise from NW Morocco) -->
+          <path class="africa-continent-path" d="
+            M 135,55
+            C 165,45 200,40 240,42
+            C 280,46 318,55 348,68
+            C 354,84 356,108 358,140
+            C 365,170 374,195 390,213
+            C 412,222 438,222 458,235
+            C 460,255 442,278 425,300
+            C 410,328 398,358 388,388
+            C 380,418 374,448 368,470
+            C 352,490 322,500 290,510
+            C 252,518 218,518 195,508
+            C 184,488 188,460 193,432
+            C 197,400 200,370 196,342
+            C 188,318 180,302 184,292
+            C 205,288 240,298 268,310
+            C 275,318 278,318 275,310
+            C 268,302 248,290 225,290
+            C 195,290 165,295 138,288
+            C 110,282 90,272 78,255
+            C 70,232 75,205 86,175
+            C 96,145 104,115 116,88
+            C 122,72 128,60 135,55 Z
+          "/>
+
+          <!-- Madagascar -->
+          <path class="africa-madagascar-path" d="
+            M 448,370
+            C 458,374 463,392 461,414
+            C 459,436 451,454 442,460
+            C 432,458 430,438 432,418
+            C 434,396 440,378 448,370 Z
+          "/>
+
+          <!-- Coverage dots: halo + core, animated via CSS -->
+          <g class="africa-dots">
+            <!-- ── Active Investment Coverage (gold) ─────────────────── -->
+            <g class="africa-dot dot-active" data-city="Casablanca">
+              <circle class="africa-dot-halo" cx="135" cy="80" r="9"/>
+              <circle class="africa-dot-core" cx="135" cy="80" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-active" data-city="Cairo">
+              <circle class="africa-dot-halo" cx="335" cy="85" r="9"/>
+              <circle class="africa-dot-core" cx="335" cy="85" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-active" data-city="Addis Ababa">
+              <circle class="africa-dot-halo" cx="390" cy="232" r="9"/>
+              <circle class="africa-dot-core" cx="390" cy="232" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-active" data-city="Lagos">
+              <circle class="africa-dot-halo" cx="240" cy="290" r="9"/>
+              <circle class="africa-dot-core" cx="240" cy="290" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-active" data-city="Nairobi">
+              <circle class="africa-dot-halo" cx="370" cy="305" r="9"/>
+              <circle class="africa-dot-core" cx="370" cy="305" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-active" data-city="Johannesburg">
+              <circle class="africa-dot-halo" cx="300" cy="460" r="9"/>
+              <circle class="africa-dot-core" cx="300" cy="460" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-active" data-city="Cape Town">
+              <circle class="africa-dot-halo" cx="218" cy="500" r="9"/>
+              <circle class="africa-dot-core" cx="218" cy="500" r="3.5"/>
+            </g>
+
+            <!-- ── Priority Growth Markets (blue) ─────────────────────── -->
+            <g class="africa-dot dot-priority" data-city="Dakar">
+              <circle class="africa-dot-halo" cx="88" cy="232" r="9"/>
+              <circle class="africa-dot-core" cx="88" cy="232" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-priority" data-city="Abidjan">
+              <circle class="africa-dot-halo" cx="160" cy="293" r="9"/>
+              <circle class="africa-dot-core" cx="160" cy="293" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-priority" data-city="Accra">
+              <circle class="africa-dot-halo" cx="200" cy="295" r="9"/>
+              <circle class="africa-dot-core" cx="200" cy="295" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-priority" data-city="Kigali">
+              <circle class="africa-dot-halo" cx="325" cy="298" r="9"/>
+              <circle class="africa-dot-core" cx="325" cy="298" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-priority" data-city="Dar es Salaam">
+              <circle class="africa-dot-halo" cx="380" cy="350" r="9"/>
+              <circle class="africa-dot-core" cx="380" cy="350" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-priority" data-city="Maputo">
+              <circle class="africa-dot-halo" cx="345" cy="465" r="9"/>
+              <circle class="africa-dot-core" cx="345" cy="465" r="3.5"/>
+            </g>
+
+            <!-- ── Emerging Opportunity Zones (green) ─────────────────── -->
+            <g class="africa-dot dot-emerging" data-city="Khartoum">
+              <circle class="africa-dot-halo" cx="320" cy="170" r="9"/>
+              <circle class="africa-dot-core" cx="320" cy="170" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-emerging" data-city="Kampala">
+              <circle class="africa-dot-halo" cx="340" cy="288" r="9"/>
+              <circle class="africa-dot-core" cx="340" cy="288" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-emerging" data-city="Kinshasa">
+              <circle class="africa-dot-halo" cx="225" cy="318" r="9"/>
+              <circle class="africa-dot-core" cx="225" cy="318" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-emerging" data-city="Luanda">
+              <circle class="africa-dot-halo" cx="202" cy="345" r="9"/>
+              <circle class="africa-dot-core" cx="202" cy="345" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-emerging" data-city="Lusaka">
+              <circle class="africa-dot-halo" cx="312" cy="398" r="9"/>
+              <circle class="africa-dot-core" cx="312" cy="398" r="3.5"/>
+            </g>
+            <g class="africa-dot dot-emerging" data-city="Harare">
+              <circle class="africa-dot-halo" cx="325" cy="418" r="9"/>
+              <circle class="africa-dot-core" cx="325" cy="418" r="3.5"/>
+            </g>
+          </g>
+        </svg>
+
+        <div class="africa-caption">Active Coverage Across 54 African Nations</div>
+
+        <div class="map-legend">
+          <div class="legend-item"><span class="legend-dot" style="background:#C5A059;color:#C5A059"></span>Active Investment Coverage</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#4a90d9;color:#4a90d9"></span>Priority Growth Markets</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#5cb85c;color:#5cb85c"></span>Emerging Opportunity Zones</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PARTNER WITH US ============================= -->
+<section id="partner" aria-labelledby="partner-h2">
+  <div class="container">
+    <div class="partner-grid">
+
+      <div>
+        <span class="section-label left-only reveal">Work With Us</span>
+        <h2 id="partner-h2" class="section-h2 reveal d1" style="text-align:left; color:var(--white);">Partner With Veridian Capital</h2>
+        <p class="section-sub reveal d2" style="text-align:left; max-width:none; margin-bottom:2rem;">Whether you represent global capital, a growing African enterprise, a government body, or a development institution — we offer tailored engagement models designed to deliver results at every stage.</p>
+
+        <div class="partner-types reveal d2">
+          <div class="partner-type">
+            <div class="pt-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <div>
+              <div class="pt-title">Institutional Investors</div>
+              <div class="pt-desc">Access curated, risk-assessed African investment mandates with full due diligence support and ongoing portfolio monitoring.</div>
+            </div>
+          </div>
+          <div class="partner-type">
+            <div class="pt-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div>
+              <div class="pt-title">International Corporations</div>
+              <div class="pt-desc">Navigate regulatory complexity and identify local partners for market entry, joint ventures, and operational expansion.</div>
+            </div>
+          </div>
+          <div class="partner-type">
+            <div class="pt-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div>
+              <div class="pt-title">Government &amp; Development Agencies</div>
+              <div class="pt-desc">Co-design public-private partnership frameworks, attract foreign direct investment, and strengthen regulatory environments.</div>
+            </div>
+          </div>
+          <div class="partner-type">
+            <div class="pt-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div>
+              <div class="pt-title">African Entrepreneurs &amp; SMEs</div>
+              <div class="pt-desc">Scale across borders with strategic capital, networks, and advisory support tailored to high-growth African businesses.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partnership Enquiry Form -->
+      <div class="partner-form-card reveal d2">
+        <h3 class="pfc-title">Send Us an Enquiry</h3>
+        <p class="pfc-sub">Complete the form below and a member of our team will respond within one business day.</p>
+
+        <form id="partnerForm" novalidate aria-label="Partnership enquiry form">
+          <div class="form-row">
+            <div class="form-group" id="pfNameGroup">
+              <label for="pfName" class="form-label">Full Name</label>
+              <input type="text" id="pfName" class="form-input" placeholder="Your name" autocomplete="name"/>
+              <span class="form-error">Please enter your full name.</span>
+            </div>
+            <div class="form-group" id="pfOrgGroup">
+              <label for="pfOrg" class="form-label">Organisation</label>
+              <input type="text" id="pfOrg" class="form-input" placeholder="Company / institution"/>
+              <span class="form-error">Please enter your organisation.</span>
+            </div>
+          </div>
+          <div class="form-group" id="pfEmailGroup">
+            <label for="pfEmail" class="form-label">Email Address</label>
+            <input type="email" id="pfEmail" class="form-input" placeholder="email@example.com" autocomplete="email"/>
+            <span class="form-error">Please enter a valid email address.</span>
+          </div>
+          <div class="form-group">
+            <label for="pfType" class="form-label">Partner Type</label>
+            <select id="pfType" class="form-select">
+              <option value="">Select your category</option>
+              <option>Institutional Investor</option>
+              <option>Multinational Corporation</option>
+              <option>Government / Development Agency</option>
+              <option>African Entrepreneur / SME</option>
+              <option>Diaspora Investor</option>
+              <option>Financial Institution</option>
+            </select>
+          </div>
+          <div class="form-group" id="pfMsgGroup">
+            <label for="pfMsg" class="form-label">Brief Overview of Your Interest</label>
+            <textarea id="pfMsg" class="form-textarea" placeholder="Tell us about your investment goals, sector interests, or partnership objectives..."></textarea>
+            <span class="form-error">Please provide at least 20 characters.</span>
+          </div>
+          <button type="submit" class="btn-gold" style="width:100%; justify-content:center;">Submit Enquiry →</button>
+          <div class="form-success-msg" id="pfSuccess" role="alert">
+            ✓ Thank you. A senior advisor will be in touch within one business day.
+          </div>
+          <p class="compliance-note"><span class="c-dot"></span>GDPR &amp; CCPA compliant. Your information is never shared.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================= TEAM ============================= -->
+<section id="team" aria-labelledby="team-h2">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label reveal">Leadership</span>
+      <h2 id="team-h2" class="section-h2 dark reveal d1">Meet Our Team</h2>
+      <p class="section-sub dark reveal d2">Seasoned advisors, economists, and investment specialists — united by a shared commitment to Africa's transformative potential.</p>
+    </div>
+
+    <div class="team-grid" id="teamGrid">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================= GALLERY ============================= -->
+<section id="gallery" aria-labelledby="gallery-h2">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label reveal">Visual Journey</span>
+      <h2 id="gallery-h2" class="section-h2 reveal d1">Our Work in Action</h2>
+      <p class="section-sub reveal d2">A glimpse into our engagements, partnerships, and field presence across the African continent.</p>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Gallery items rendered by renderGallery() from the `galleryItems` array. -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CONTACT ============================= -->
+<section id="contact" aria-labelledby="contact-h2">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Form -->
+      <div>
+        <span class="section-label left-only reveal">Get In Touch</span>
+        <h2 id="contact-h2" class="contact-h2 reveal d1">Begin Your African Investment Journey</h2>
+        <p class="contact-sub reveal d2">Every successful venture begins with a conversation. Reach out to arrange a no-obligation introductory call with one of our senior advisors.</p>
+
+        <form id="contactForm" class="reveal d2" novalidate aria-label="Contact form" style="display:flex;flex-direction:column;gap:1.1rem;">
+          <div class="form-row">
+            <div class="form-group" id="cNameGroup">
+              <label for="cName" class="form-label">Full Name</label>
+              <input type="text" id="cName" class="form-input" placeholder="Your name" autocomplete="name"/>
+              <span class="form-error">Please enter your name.</span>
+            </div>
+            <div class="form-group" id="cEmailGroup">
+              <label for="cEmail" class="form-label">Email</label>
+              <input type="email" id="cEmail" class="form-input" placeholder="email@example.com" autocomplete="email"/>
+              <span class="form-error">Please enter a valid email.</span>
+            </div>
+          </div>
+          <div class="form-group" id="cMsgGroup">
+            <label for="cMsg" class="form-label">Message</label>
+            <textarea id="cMsg" class="form-textarea" placeholder="Tell us about your investment interests or objectives..."></textarea>
+            <span class="form-error">Message must be at least 20 characters.</span>
+          </div>
+          <button type="submit" class="btn-gold" id="cSubmitBtn" style="align-self:flex-start;">Send Message →</button>
+          <div class="form-success-msg" id="cSuccess" role="alert">✓ Thank you. We'll be in touch shortly.</div>
+          <p class="compliance-note"><span class="c-dot"></span>Protected under GDPR &amp; CCPA. We never share your data.</p>
+        </form>
+      </div>
+
+      <!-- Office Info -->
+      <div>
+        <span class="section-label left-only reveal">Our Offices</span>
+        <div class="office-cards reveal d1">
+          <div class="office-card">
+            <div class="office-city"><span class="office-flag" aria-hidden="true"><svg class="flag-svg" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="3"/><rect x="25" width="10" height="40" fill="#fff"/><rect y="15" width="60" height="10" fill="#fff"/><rect x="27" width="6" height="40" fill="#C8102E"/><rect y="17" width="60" height="6" fill="#C8102E"/></svg></span>London — International HQ</div>
+            <div class="office-addr">22 Bishopsgate, Level 14<br>London, EC2N 4BQ, United Kingdom<br><small style="color:var(--gold-dk);">Investor Relations &amp; Global Coordination</small></div>
+          </div>
+          <div class="office-card">
+            <div class="office-city"><span class="office-flag" aria-hidden="true"><svg class="flag-svg" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#fff"/><path d="M0,0 L30,20 L60,0 Z" fill="#DE3831"/><path d="M0,40 L30,20 L60,40 Z" fill="#002395"/><polygon points="0,0 0,40 30,20" fill="#000"/><path d="M0,0 L0,5 L25,20 L0,35 L0,40 L4,40 L31,20 L4,0 Z" fill="#FFB612"/><path d="M4,0 L31,20 L4,40 L60,40 L60,32 L33,20 L60,8 L60,0 Z" fill="#007A4D"/></svg></span>Johannesburg — Africa HQ</div>
+            <div class="office-addr">The Marc, Tower 1, Level 8<br>Sandton, Johannesburg 2196, South Africa<br><small style="color:var(--gold-dk);">Continental Operations &amp; Field Presence</small></div>
+          </div>
+          <div class="office-card">
+            <div class="office-city"><span class="office-flag" aria-hidden="true"><svg class="flag-svg" viewBox="0 0 60 40" aria-hidden="true"><rect width="20" height="40" fill="#008751"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#008751"/></svg></span>Lagos — West Africa Office</div>
+            <div class="office-addr">Victoria Island Business Park<br>Lagos, Nigeria<br><small style="color:var(--gold-dk);">West African Markets &amp; Partnerships</small></div>
+          </div>
+        </div>
+
+        <div class="contact-info-links reveal d2">
+          <div class="cil">
+            <div class="cil-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.98 16.92z"/></svg></div>
+            <a href="tel:+233548191278">+233 548 191 278</a>
+          </div>
+          <div class="cil">
+            <div class="cil-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <a href="mailto:advisory@veridian-capital.com">advisory@veridian-capital.com</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" aria-label="Veridian Capital Partners">
+          <img src="logo.png" alt="Veridian Capital Partners logo" class="nav-logo-img"/>
+          <span>VERIDIAN CAPITAL</span>
+        </a>
+        <p>An international investment facilitation and advisory firm bridging global capital with Africa's most compelling growth opportunities since 2010.</p>
+        <div class="footer-social" aria-label="Social media">
+          <a href="#" class="soc-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="soc-link" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          <a href="#" class="soc-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="soc-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <p class="fc-title">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#whatwedo">What We Do</a></li>
+          <li><a href="#sectors">Key Sectors</a></li>
+          <li><a href="#impact">Our Impact</a></li>
+          <li><a href="#why-africa">Why Africa</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="fc-title">More</p>
+        <ul class="footer-links">
+          <li><a href="#partner">Partner With Us</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="footer-more-contact" aria-label="Direct contact">
+          <div class="footer-contact-group">
+            <a href="mailto:advisory@veridian-capital.com" class="footer-contact-text">advisory@veridian-capital.com</a>
+            <div class="footer-contact-icons">
+              <a href="mailto:advisory@veridian-capital.com" class="soc-link" aria-label="Email advisory@veridian-capital.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="soc-stroke" aria-hidden="true">
+                  <rect x="2" y="6" width="20" height="12" rx="2"/>
+                  <path d="M2 8l10 6 10-6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-contact-group">
+            <a href="tel:+233548191278" class="footer-contact-text">+233 548 191 278</a>
+            <div class="footer-contact-icons">
+              <a href="tel:+233548191278" class="soc-link" aria-label="Call +233 548 191 278">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="soc-stroke" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </a>
+              <a href="sms:+233548191278" class="soc-link" aria-label="Text +233 548 191 278">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="soc-stroke" aria-hidden="true">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/>
+                  <circle cx="9" cy="12" r=".7" fill="currentColor" stroke="none"/>
+                  <circle cx="12" cy="12" r=".7" fill="currentColor" stroke="none"/>
+                  <circle cx="15" cy="12" r=".7" fill="currentColor" stroke="none"/>
+                </svg>
+              </a>
+              <a href="https://wa.me/233548191278?text=Hello%20Veridian%20Capital%20Partners%20%E2%80%94%20I%20would%20like%20to%20discuss%20a%20potential%20advisory%20engagement%20and%20learn%20more%20about%20your%20investment%20facilitation%20services." class="soc-link" aria-label="Message +233 548 191 278 on WhatsApp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20.52 3.48A11.86 11.86 0 0 0 12.03 0C5.45 0 .1 5.34.1 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.93 11.93 0 0 0 5.72 1.46h.01c6.58 0 11.93-5.34 11.93-11.91 0-3.18-1.24-6.17-3.44-8.42zM12.03 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.52-5.27c0-5.46 4.45-9.9 9.92-9.9 2.65 0 5.14 1.03 7.01 2.9a9.84 9.84 0 0 1 2.9 7.01c0 5.46-4.45 9.9-9.92 9.9zm5.44-7.42c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">© <span id="copyrightYear"></span> Veridian Capital. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================= JAVASCRIPT ============================= -->
+<script>
+'use strict';
+
+/* ─────────────────────────────────────────────────────
+   SECTOR DATA
+───────────────────────────────────────────────────── */
+const sectors = [
+  { name: 'Agriculture & Agribusiness', desc: 'Value chains, precision farming, export-grade processing, cold-chain logistics', img: 'sector_agriculture.png', icon: '🌾', color: '#5cb85c' },
+  { name: 'Renewable Energy', desc: 'Solar, wind, hydro, mini-grid solutions & green hydrogen projects', img: 'sector_energy.png', icon: '⚡', color: '#f0ad4e' },
+  { name: 'Infrastructure', desc: 'Transport corridors, ports, water systems & urban development', img: 'sector_infrastructure.png', icon: '🏗', color: '#5bc0de' },
+  { name: 'Technology & Innovation', desc: 'Fintech, e-commerce, healthtech, edtech & digital infrastructure', img: 'sector_technology.png', icon: '💻', color: '#9b59b6' },
+  { name: 'Mining & Natural Resources', desc: 'Critical minerals, responsible extraction & beneficiation', img: 'sector_mining.png', icon: '⛏', color: '#e67e22' },
+  { name: 'Financial Services', desc: 'Microfinance, insurance, capital markets & digital banking', img: 'sector_financial.png', icon: '🏦', color: '#2980b9' },
+  { name: 'Tourism & Hospitality', desc: 'Eco-tourism, boutique hospitality & cultural heritage projects', img: 'sector_tourism.png', icon: '✈', color: '#1abc9c' },
+  { name: 'Manufacturing & Industrials', desc: 'Light manufacturing, industrial parks & SEZ development', img: 'sector_manufacturing.png', icon: '🏭', color: '#c0392b' },
+];
+
+/* ─────────────────────────────────────────────────────
+   TEAM DATA
+───────────────────────────────────────────────────── */
+const teamMembers = [
+  { name: 'Adaeze Okonkwo', role: 'Chief Executive Officer', bio: 'Former World Bank investment specialist with 20 years across Sub-Saharan Africa. Expert in PPP structuring and sovereign advisory.', img: 'adaeze.jfif' },
+  { name: 'Dr. Marcus Whitfield', role: 'Head of Investment Facilitation', bio: 'PhD Economics (LSE). Specialises in infrastructure finance, blended capital structures, and institutional investor relations across 25+ markets.', img: 'marcus.jfif' },
+  { name: 'Fatima Al-Hassan', role: 'Director, North Africa & MENA', bio: 'Trilingual strategist with a decade of experience navigating regulatory environments across Egypt, Morocco, and the GCC.', img: 'fatima.jfif' },
+  { name: 'Kwame Asante-Boateng', role: 'Head of ESG & Impact', bio: 'Chartered sustainability professional and former UN Environment Programme consultant. Leads ESG integration across all mandates.', img: 'kwame.jfif' },
+];
+
+/* ─────────────────────────────────────────────────────
+   HERO PARTICLE CANVAS
+───────────────────────────────────────────────────── */
+function initHeroParticles() {
+  const canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const resize = () => { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; };
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+
+  const pts = Array.from({ length: 55 }, () => ({
+    x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+    vx: (Math.random() - .5) * .2, vy: (Math.random() - .5) * .2,
+    r: .8 + Math.random() * 1.8, a: .08 + Math.random() * .22
+  }));
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < pts.length; i++) {
+      for (let j = i + 1; j < pts.length; j++) {
+        const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
+        const d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 140) {
+          ctx.strokeStyle = `rgba(197,160,89,${(1 - d / 140) * .07})`;
+          ctx.lineWidth = .7;
+          ctx.beginPath(); ctx.moveTo(pts[i].x, pts[i].y); ctx.lineTo(pts[j].x, pts[j].y); ctx.stroke();
+        }
+      }
+    }
+    pts.forEach(p => {
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(197,160,89,${p.a})`; ctx.fill();
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < -10) p.x = canvas.width + 10;
+      if (p.x > canvas.width + 10) p.x = -10;
+      if (p.y < -10) p.y = canvas.height + 10;
+      if (p.y > canvas.height + 10) p.y = -10;
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+/* ─────────────────────────────────────────────────────
+   SECTORS GRID
+───────────────────────────────────────────────────── */
+function renderSectors() {
+  const grid = document.getElementById('sectorsGrid');
+  // Every sector in the `sectors` array ships with a real image; if the
+  // load fails, the onerror handler tags the parent .sector-card with
+  // .img-fallback so the gradient + caption CSS fallback takes over.
+  grid.innerHTML = sectors.map((s, i) => {
+    // Staggered reveal per row of 4: indices 0,4 get base delay; 1,2,3 → d1,d2,d3.
+    const delay = i % 4;
+    return `
+      <div class="sector-card reveal${delay ? ` d${delay}` : ''}">
+        <img src="${s.img}" alt="${s.name}" class="sector-img" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback');"/>
+        <div class="sector-overlay">
+          <div class="sector-icon-wrap">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+            </svg>
+          </div>
+          <div class="sector-name">${s.name}</div>
+          <div class="sector-desc">${s.desc}</div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+/* ─────────────────────────────────────────────────────
+   TEAM GRID
+───────────────────────────────────────────────────── */
+function renderTeam() {
+  const grid = document.getElementById('teamGrid');
+  // Every member ships with a real photo. The sibling <canvas> stays
+  // in the DOM (display:none) as a runtime fallback in case an image
+  // fails to load — the inline onerror handler reveals it and calls
+  // window.__drawTeamFallback to paint the initials avatar.
+  grid.innerHTML = teamMembers.map((m, i) => `
+    <div class="team-card reveal d${i % 4}">
+      <div class="team-photo">
+        <img src="${m.img}" alt="Photo of ${m.name}" class="team-photo-img" loading="lazy" onerror="this.style.display='none'; const c=document.getElementById('teamCanvas${i}'); if(c){c.style.display='block'; window.__drawTeamFallback&&window.__drawTeamFallback(${i});}"/>
+        <canvas id="teamCanvas${i}" width="300" height="240" style="display:none;" aria-label="Photo of ${m.name}"></canvas>
+      </div>
+      <div class="team-body">
+        <div class="team-name">${m.name}</div>
+        <div class="team-role">${m.role}</div>
+        <div class="team-bio">${m.bio}</div>
+      </div>
+    </div>`).join('');
+
+  window.__drawTeamFallback = (i) => {
+    const m = teamMembers[i];
+    if (!m) return;
+    drawTeamCanvas(document.getElementById('teamCanvas' + i), m.name, i);
+  };
+}
+
+function drawTeamCanvas(canvas, name, seed) {
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const w = canvas.width, h = canvas.height;
+  const colors = ['#1A3556','#112240','#1e3a5f','#15294a'];
+  const bg = ctx.createLinearGradient(0, 0, w, h);
+  bg.addColorStop(0, colors[seed % colors.length]);
+  bg.addColorStop(1, '#0A192F');
+  ctx.fillStyle = bg; ctx.fillRect(0, 0, w, h);
+
+  // Silhouette
+  ctx.fillStyle = 'rgba(197,160,89,.25)';
+  ctx.beginPath(); ctx.arc(w / 2, h * .35, 42, 0, Math.PI * 2); ctx.fill();
+  ctx.beginPath();
+  ctx.arc(w / 2, h * .35, 28, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(197,160,89,.35)'; ctx.fill();
+
+  // Body silhouette
+  ctx.beginPath();
+  ctx.moveTo(w / 2 - 45, h + 5);
+  ctx.quadraticCurveTo(w / 2 - 45, h * .7, w / 2, h * .65);
+  ctx.quadraticCurveTo(w / 2 + 45, h * .7, w / 2 + 45, h + 5);
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(197,160,89,.18)'; ctx.fill();
+
+  // Initials
+  const initials = name.split(' ').map(n => n[0]).join('').slice(0, 2);
+  ctx.font = 'bold 1.4rem DM Sans, sans-serif';
+  ctx.fillStyle = 'rgba(197,160,89,.9)';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(initials, w / 2, h * .35);
+}
+
+/* ─────────────────────────────────────────────────────
+   GALLERY GRID
+───────────────────────────────────────────────────── */
+const galleryItems = [
+  { img: 'https://images.unsplash.com/photo-1577948000111-9c970dfe3743?auto=format&fit=crop&w=1200&q=80', cap: 'Johannesburg Skyline' },
+  { img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80', cap: 'African Leadership Roundtable' },
+  { img: 'https://images.unsplash.com/photo-1581092446327-9b52bd1570c2?auto=format&fit=crop&w=1200&q=80', cap: 'Engineering Site Walkthrough' },
+  { img: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80', cap: 'East African Savanna' },
+  { img: 'gallery_community.png', cap: 'Community Engagement Initiative' },
+  { img: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1200&q=80', cap: 'Renewable Energy Expansion' },
+];
+
+function renderGallery() {
+  const grid = document.getElementById('galleryGrid');
+  // All gallery items ship with an `img` URL; if the load fails, the
+  // onerror handler tags the parent .gallery-item with .img-fallback,
+  // and the CSS rule (.gallery-item.img-fallback::after) renders the
+  // caption text on a gradient as the visual fallback. No canvas needed.
+  grid.innerHTML = galleryItems.map((item, i) => `
+      <div class="gallery-item reveal${i%3!==0?` d${i%3}`:''}" data-cap="${item.cap}">
+        <img src="${item.img}" alt="${item.cap}" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback');"/>
+        <div class="gallery-overlay" aria-hidden="true"><span class="gallery-overlay-icon">🔍</span></div>
+      </div>`).join('');
+}
+
+/* ─────────────────────────────────────────────────────
+   INTERSECTION OBSERVER — REVEAL
+───────────────────────────────────────────────────── */
+function observeReveal() {
+  const els = document.querySelectorAll('.reveal:not(.visible)');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        // Trigger stat counters
+        if (e.target.classList.contains('impact-stat') || e.target.closest('#impact')) {
+          animateCounters();
+        }
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: .1 });
+  els.forEach(el => io.observe(el));
+}
+
+/* ─────────────────────────────────────────────────────
+   STAT COUNTERS
+───────────────────────────────────────────────────── */
+let countersRun = false;
+function animateCounters() {
+  if (countersRun) return;
+  countersRun = true;
+  document.querySelectorAll('.impact-val[data-count]').forEach(el => {
+    const target = parseFloat(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    const isDecimal = String(target).includes('.');
+    const dur = 1800;
+    const start = performance.now();
+    const prefix = el.textContent.startsWith('$') ? '$' : '';
+    function step(now) {
+      const prog = Math.min((now - start) / dur, 1);
+      // Linear interpolation: constant rate of change, so small-target
+      // counters like "15+" tick at a steady, evenly-paced cadence
+      // rather than racing through the first half and crawling the
+      // last few digits (which a cubic ease-out produces).
+      const val = target * prog;
+      el.textContent = prefix + (isDecimal ? val.toFixed(1) : Math.floor(val).toLocaleString()) + suffix;
+      if (prog < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}
+
+/* ─────────────────────────────────────────────────────
+   NAVBAR SCROLL
+───────────────────────────────────────────────────── */
+function initNavbar() {
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+}
+
+/* ─────────────────────────────────────────────────────
+   HAMBURGER + NAV PREMIUM (unified)
+   The hamburger button (#hambBtn) is the sole trigger for the
+   Premium Compact menu (#navPremium). Note: the hamburger is
+   CSS-hidden on every laptop viewport (≥769px) — the full
+   horizontal nav (logo + wordmark + 6 links + Partner CTA +
+   WhatsApp) fits on one row down to the 769px laptop floor (the
+   ≤900 tier shrinks the wordmark to .82rem so it still fits) — so
+   in practice this menu is only reachable on mobile (≤768px). The
+   handlers below are breakpoint-agnostic so the menu still works
+   if the hamburger is ever surfaced at wider widths.
+
+   Tapping the hamburger toggles the premium view open/closed.
+   The view also closes on:
+     - close-button click (×)
+     - click outside the card (but not on the hamburger itself)
+     - Escape key
+     - clicking a link inside the premium view (after the
+       smooth-scroll animation has started)
+   Desktop horizontal nav links / CTA do NOT open the premium
+   view — they just smooth-scroll to their target sections.
+───────────────────────────────────────────────────── */
+function initNavPremium() {
+  const premium = document.getElementById('navPremium');
+  if (!premium) return;
+  const hamb = document.getElementById('hambBtn');
+  const closeBtn = premium.querySelector('.nav-premium-close');
+
+  const setOpen = (open) => {
+    premium.classList.toggle('open', open);
+    premium.setAttribute('aria-hidden', open ? 'false' : 'true');
+    document.body.classList.toggle('nav-premium-open', open);
+    if (hamb) {
+      hamb.classList.toggle('open', open);
+      hamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  const close = () => setOpen(false);
+  const toggle = () => setOpen(!premium.classList.contains('open'));
+
+  // Hamburger toggles the premium view (open → close → open …).
+  if (hamb) hamb.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggle();
+  });
+
+  // Links inside the premium view: scroll to target (handled by
+  // smooth-scroll), then collapse the card.
+  premium.querySelectorAll('.nav-premium-link, .nav-premium-cta').forEach(link => {
+    link.addEventListener('click', () => {
+      setTimeout(close, 350);
+    });
+  });
+
+  // Close button.
+  if (closeBtn) closeBtn.addEventListener('click', close);
+
+  // Outside-click collapses the view. The hamburger itself is
+  // excluded so its own toggle handler isn't double-fired.
+  document.addEventListener('click', (e) => {
+    if (!premium.classList.contains('open')) return;
+    if (premium.contains(e.target)) return;
+    if (e.target.closest && e.target.closest('.hamburger')) return;
+    close();
+  });
+
+  // Escape collapses the view.
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && premium.classList.contains('open')) close();
+  });
+}
+
+/* ─────────────────────────────────────────────────────
+   SMOOTH SCROLL
+───────────────────────────────────────────────────── */
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      // Bare "#" or empty fragments (e.g. the footer social placeholders):
+      // preventDefault so the browser doesn't snap to the page top, and
+      // skip the querySelector (which would throw a SyntaxError on "#").
+      if (!href || href === '#' || href.length < 2) {
+        e.preventDefault();
+        return;
+      }
+      let target = null;
+      try { target = document.querySelector(href); } catch (_) { return; }
+      if (!target) return;
+      e.preventDefault();
+      // Navbar is position:fixed with a non-zero top offset (18px on
+      // desktop, 12/10px on mobile), so its visible bottom edge =
+      // top + offsetHeight. getBoundingClientRect().bottom captures
+      // both in one read, regardless of breakpoint or scroll position.
+      const navEl = document.getElementById('navbar');
+      const navBottom = navEl ? navEl.getBoundingClientRect().bottom : 0;
+      const gap = 12;
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.scrollY - navBottom - gap,
+        behavior: 'smooth'
+      });
+    });
+  });
+}
+
+/* ─────────────────────────────────────────────────────
+   FORM VALIDATION
+───────────────────────────────────────────────────── */
+function validEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
+function setErr(id, show) { document.getElementById(id)?.classList.toggle('has-error', show); }
+
+function initForms() {
+  // Partner form
+  const pf = document.getElementById('partnerForm');
+  if (pf) pf.addEventListener('submit', e => {
+    e.preventDefault();
+    const n = document.getElementById('pfName').value.trim();
+    const org = document.getElementById('pfOrg').value.trim();
+    const em = document.getElementById('pfEmail').value.trim();
+    const msg = document.getElementById('pfMsg').value.trim();
+    setErr('pfNameGroup', !n); setErr('pfOrgGroup', !org);
+    setErr('pfEmailGroup', !validEmail(em)); setErr('pfMsgGroup', msg.length < 20);
+    if (n && org && validEmail(em) && msg.length >= 20) {
+      pf.reset();
+      document.getElementById('pfSuccess').classList.add('visible');
+    }
+  });
+
+  // Contact form
+  const cf = document.getElementById('contactForm');
+  if (cf) cf.addEventListener('submit', e => {
+    e.preventDefault();
+    const n = document.getElementById('cName').value.trim();
+    const em = document.getElementById('cEmail').value.trim();
+    const msg = document.getElementById('cMsg').value.trim();
+    setErr('cNameGroup', !n); setErr('cEmailGroup', !validEmail(em)); setErr('cMsgGroup', msg.length < 20);
+    if (n && validEmail(em) && msg.length >= 20) {
+      const btn = document.getElementById('cSubmitBtn');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      setTimeout(() => {
+        cf.reset(); btn.disabled = false; btn.textContent = 'Send Message →';
+        document.getElementById('cSuccess').classList.add('visible');
+      }, 1200);
+    }
+  });
+}
+
+/* ─────────────────────────────────────────────────────
+   ACTIVE NAV LINK (scroll-spy)
+   Highlights the .nav-links anchor whose target section
+   is currently at the centre band of the viewport. The
+   `.active` class is mutually exclusive across links so
+   the visual "you are here" pill never doubles up.
+───────────────────────────────────────────────────── */
+function initActiveNavLinks() {
+  const links = Array.from(document.querySelectorAll('#navbar .nav-links a[href^="#"]'));
+  if (!links.length || !('IntersectionObserver' in window)) return;
+
+  const map = new Map();
+  links.forEach(a => {
+    const id = a.getAttribute('href').slice(1);
+    const sec = document.getElementById(id);
+    if (sec) map.set(sec, a);
+  });
+  if (!map.size) return;
+
+  const setActive = (link) => {
+    links.forEach(l => l.classList.toggle('active', l === link));
+  };
+
+  const visible = new Set();
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) visible.add(e.target);
+      else visible.delete(e.target);
+    });
+    if (!visible.size) return;
+    const topSection = Array.from(visible).sort(
+      (a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top
+    )[0];
+    setActive(map.get(topSection));
+  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+  map.forEach((_, sec) => obs.observe(sec));
+
+  setActive(map.get(document.getElementById('home')) || links[0]);
+}
+
+/* ─────────────────────────────────────────────────────
+   COPYRIGHT YEAR
+───────────────────────────────────────────────────── */
+function setYear() {
+  const el = document.getElementById('copyrightYear');
+  if (el) el.textContent = new Date().getFullYear();
+}
+
+/* ─────────────────────────────────────────────────────
+   FLOATING "PARTNER WITH US" TOAST
+   Appears (slide-up + fade-in) when #impact enters the
+   viewport. Dismissible with × button, the inline CTA,
+   or Escape. Dismissal only hides for the current page
+   view — reloading the page re-arms the toast.
+───────────────────────────────────────────────────── */
+function initPartnerToast() {
+  const toast = document.getElementById('partnerToast');
+  if (!toast) return;
+
+  const dismissBtn = toast.querySelector('.cta-toast-dismiss');
+  const ctaBtn = toast.querySelector('.cta-toast-cta, .btn-gold');
+  const trigger = document.getElementById('impact');
+
+  const show = () => {
+    toast.classList.add('visible');
+    toast.setAttribute('aria-hidden', 'false');
+  };
+  const hide = () => {
+    if (!toast.classList.contains('visible')) return;
+    toast.classList.remove('visible');
+    toast.setAttribute('aria-hidden', 'true');
+  };
+
+  if (trigger && 'IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        show();
+        obs.disconnect();
+      }
+    }, { threshold: 0.15 });
+    obs.observe(trigger);
+  } else {
+    setTimeout(show, 4000);
+  }
+
+  if (dismissBtn) dismissBtn.addEventListener('click', hide);
+  // User engaged with the CTA — let the smooth-scroll fire first, then hide.
+  if (ctaBtn) ctaBtn.addEventListener('click', () => setTimeout(hide, 150));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && toast.classList.contains('visible')) hide();
+  });
+}
+
+/* ─────────────────────────────────────────────────────
+   INIT
+───────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  setYear();
+  initNavbar();
+  initNavPremium();
+  initSmoothScroll();
+  initForms();
+
+  // Instant hero reveals
+  document.querySelectorAll('#home .reveal').forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), 150 + i * 100);
+  });
+
+  // Canvases & dynamic content
+  initHeroParticles();
+  renderSectors();
+  renderTeam();
+  renderGallery();
+
+  // Intersection observer
+  observeReveal();
+
+  // Floating "Partner With Us" toast (appears when #impact enters viewport)
+  initPartnerToast();
+
+  // Scroll-spy active nav link highlighting (desktop horizontal nav).
+  initActiveNavLinks();
+});
+</script>
+
+<!-- ============================= FLOATING TOASTS / OVERLAYS ============================= -->
+<div id="overlays" aria-live="polite">
+  <div
+    id="partnerToast"
+    class="impact-cta-band"
+    role="dialog"
+    aria-label="Partner With Us call to action"
+    aria-hidden="true"
+  >
+    <button class="cta-toast-dismiss" aria-label="Dismiss" type="button">&times;</button>
+    <div class="impact-cta-text">
+      <h3>Ready to Create Impact Together?</h3>
+      <p>Join investors and partners shaping Africa's economic future.</p>
+    </div>
+    <div class="cta-toast-actions">
+      <a href="#partner" class="btn-gold cta-toast-cta">Partner With Us →</a>
+      <a href="https://wa.me/233548191278?text=Hello%20Veridian%20Capital%20Partners%20%E2%80%94%20I%20would%20like%20to%20discuss%20a%20potential%20advisory%20engagement%20and%20learn%20more%20about%20your%20investment%20facilitation%20services." class="btn-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.03 0C5.45 0 .1 5.34.1 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.93 11.93 0 0 0 5.72 1.46h.01c6.58 0 11.93-5.34 11.93-11.91 0-3.18-1.24-6.17-3.44-8.42zM12.03 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.52-5.27c0-5.46 4.45-9.9 9.92-9.9 2.65 0 5.14 1.03 7.01 2.9a9.84 9.84 0 0 1 2.9 7.01c0 5.46-4.45 9.9-9.92 9.9zm5.44-7.42c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
