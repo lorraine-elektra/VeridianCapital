@@ -3,7 +3,7 @@ A premium single-page marketing and investor-relations website for Veridian Capi
 Built as a fully static, framework-free site using a single `index.html` with inline HTML, CSS, and Vanilla JavaScript.
 
 ## Live Demo
-
+https://veridiancapital.pages.dev/
 
 
 ## Features
